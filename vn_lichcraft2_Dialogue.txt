@@ -1,0 +1,1177 @@
+# "vn_lich_becoming" -----------------------------------------------------------
+@ 4 "vn_lich_becoming" 1150416307198557415
+I have read 'The Secrets of the Necromancer'. It tells of a way to pursue immortality, a way that I might become more powerful than before. If I wish to follow this course of action I should see about finding someone who can craft me an incredibly strong amulet, and someone who can teach me a powerful enchant spell. I will also need to accrue an empty vial and the ingredients listed in the book.
+
+# "Greeting 0" -----------------------------------------------------------------
+@ 2 "Greeting 0" 1576226363789016476
+...
+
+@ 2 "Greeting 0" 1413613367327518751
+The Undead folower gazes at you with lifeless eyes...
+
+@ 2 "Greeting 0" 5200154743014534
+[The mage looks at you, exptactantly]
+
+@ 2 "Greeting 0" 144103208557048309
+Suddenly... it feels strangely cold here.
+
+@ 2 "Greeting 0" 21392781140186578
+[%Name tries to avoid your gaze]
+
+@ 2 "Greeting 0" 325505891131618306 "vn_power_tutor"
+[ Again you focus on the energies within you, looking to unlock the secrets of their great potential ]
+
+@ 2 "Greeting 0" 19433210161731425083 "vn_spellmaketalker"
+[You turn your eye upon yourself, and begin the meditation necessary for the creation of your own spells. Performing the motions to tear open reality yet again, you release your mind and your environment into the all-consuming act of innate spellcraft. ]
+
+@ 2 "Greeting 0" 17116102611974417222 "vn_enchantmaketalker"
+[You turn your eye upon yourself, and begin the meditation necessary for the creation of your own enchantments. Performing the motions to tear open reality yet again, you release your mind and your environment into the all-consuming act of innate enchanting. ]
+
+@ 2 "Greeting 0" 25889141957965272 "vn_power_tutor"
+[The arcane powers that ebb through your body crash against the impenetrable walls of your mind as the gentle waves of the sea crash against the mightiest shoreline. Will your mind one day crumble as the do cliffs, against the untold aeons of time? For now such concerns are irrelevant. You thirst only for more power, the raging torrents inside you are but a fraction of what you feel you can control. Perhaps completing more power rituals would slake this thirst....]
+
+@ 2 "Greeting 0" 767517359189328808 "vn_spellmaketalker"
+[Sharply turning your eye upon yourself, you bear down into the earth and use your skeletal phlanges to mimic the motion of tearing beyond the curtain of material existence.  The power surge as you complete the motion is amazing, and at first threatens to completely overwhelm you until you realize what you are now capable of - reaching into the very fabric of reality and the magics of the planes to craft arcane spells of your own design - for whatever purpose you desire.  Truly, this is power.]
+
+@ 2 "Greeting 0" 16230256003182429188 "vn_enchantmaketalker"
+[Sharply turning your eye upon yourself, you bear down into the earth and use your skeletal phlanges to mimic the motion of tearing beyond the curtain of material existence.  The power surge as you complete the motion is amazing, and at first threatens to completely overwhelm you until you realize what you are now capable of - reaching into the very fabric of reality and the magics of the planes to craft arcane enchantments of your own design - for whatever purpose you desire.  Truly, this is power.]
+
+@ 2 "Greeting 0" 2820158182898026047 "Rat_pack_rerlas"
+Squeak!
+
+@ 2 "Greeting 0" 1484299393167318228 "vn_packrat"
+Squeak!
+
+@ 2 "Greeting 0" 3053416069775816458 "Rat_pack_rerlas"
+Squeak!
+
+@ 2 "Greeting 0" 3164864183130614291 "vn_packrat"
+Squeak?
+
+@ 2 "Greeting 0" 1970915763165106390 "Rat_pack_rerlas"
+Squeak?
+
+@ 2 "Greeting 0" 227322281661726892
+What are you doing! We'll let your actions go for now, but once you're released, stuff like that will get you arrested again.
+
+@ 2 "Greeting 0" 2384079682546218694
+Loathsome beast, you shall get no further! Die fiend!
+
+@ 2 "Greeting 0" 908258232047713411
+Loathsome beast, you shall get no further! Die fiend!
+
+@ 2 "Greeting 0" 6624149972417523130
+Vile, undead creature! Whatever pathetic aims have transformed you into this state, I'll end your existence this day, no matter what the cost!
+
+@ 2 "Greeting 0" 32097218991217315504
+Vile, undead creature! Whatever pathetic aims have transformed you into this state, I'll end your existence this day, no matter what the cost!
+
+@ 2 "Greeting 0" 1881730906516723033
+Listen well, lich - whatever unholy task has set you upon us this day, it shall only end in destruction for you!  Die, abomination!
+
+@ 2 "Greeting 0" 2004079729934368
+Listen well, lich - whatever unholy task has set you upon us this day, it shall only end in destruction for you!  Die, abomination!
+
+@ 2 "Greeting 0" 327471843023809752 "vn_packrat"
+Squeak!
+
+# "Greeting 2" -----------------------------------------------------------------
+@ 2 "Greeting 2" 3232229201207005141 "vn_relvel"
+You thought I was dead? You are more foolish than I thought. Fools should be destroyed, and so you will be!
+
+@ 2 "Greeting 2" 21829233853079922855 "vn_relvel"
+You dare steal what is mine? You shall be destroyed
+
+@ 2 "Greeting 2" 2796529004545420614
+[You leave %Name for the time being]
+
+@ 2 "Greeting 2" 175131097228152951
+[You leave %Name for the time being]
+
+@ 2 "Greeting 2" 31385231682717723769
+What do you wish of me now, exalted one?
+
+@ 2 "Greeting 2" 12451256601110019085
+What do you wish of me now, exalted one?
+
+@ 2 "Greeting 2" 2240113115268522818
+[%Name is busy doing construction work. Do you wish to stop this activity?]
+
+@ 2 "Greeting 2" 8789212103073721699
+[%Name is busy worshipping you. Do you wish to stop this activity?]
+
+@ 2 "Greeting 2" 2714824048404923701
+I have done as you asked, O Great One
+
+@ 2 "Greeting 2" 22360221392268627724
+[%Name's eyes lock on you, and you see they are filled with stark terror]
+I... I... Have mercy on me! I tried, but the task was too great! Please spare my life!
+
+@ 2 "Greeting 2" 26760193492507430957
+What are your orders, O Mighty One?
+
+@ 2 "Greeting 2" 671121778515821072 "vn_bonewalker_corpse"
+[The bonewalker looks at you, expectantly]
+
+@ 2 "Greeting 2" 23583905663626320 "vn_bonewalker"
+[The bonewalker looks at you, expectantly]
+
+@ 2 "Greeting 2" 7780254353094015270 "vn_greater_bonewalker"
+[The bonewalker looks at you, expectantly]
+
+@ 2 "Greeting 2" 94821199812606889 "vn_bonewolf"
+[The bonewalker looks at you, expectantly]
+
+@ 2 "Greeting 2" 22216708652898881 "vn_demonite"
+[The bonewalker looks at you, expectantly]
+
+@ 2 "Greeting 2" 23194131271644624193 "vn_monstrous_bonewalker"
+[The bonewalker looks at you, expectantly]
+
+@ 2 "Greeting 2" 18910232791845712889 "vn_ancestor_ghost"
+What Are Your Orders Master?
+
+@ 2 "Greeting 2" 2050996757816301 "vn_ancestor_guardian"
+What Are Your Orders Master?
+
+@ 2 "Greeting 2" 2873755512106816430 "vn_ghost_phantom"
+What Are Your Orders Master?
+
+@ 2 "Greeting 2" 166022503143903399 "vn_g_ancestor_ghost"
+What Are Your Orders Master?
+
+@ 2 "Greeting 2" 10351111692566828236 "vn_spectre"
+What Are Your Orders Master?
+
+@ 2 "Greeting 2" 29359257361480626863 "vn_avenging_phantasm"
+What Are Your Orders Master?
+
+@ 2 "Greeting 2" 780141002622117352 "vn_skeleton_bonelord"
+What Are Your Orders Master?
+
+@ 2 "Greeting 2" 1606429991190201699
+What Are Your Orders Master?
+
+@ 2 "Greeting 2" 310051081984615102
+What do you wish of me..... master?
+
+@ 2 "Greeting 2" 2527131235290849690
+Disguise yourself before talking to me next time, Lich. If they find I know you I'll be more dead than you are.
+
+@ 2 "Greeting 2" 5914216963155714755
+What do you want, Lich?
+
+@ 2 "Greeting 2" 149426034209634749
+For Vivec's sake! Disguise yourself, %PCName. It won't do for me to be seen with a Lich
+
+@ 2 "Greeting 2" 1692425985800413411
+In Almalexia's name, at least try not to look conspicuous next time!
+
+@ 2 "Greeting 2" 442725627107985132
+What is it this time, undead one?
+
+@ 2 "Greeting 2" 17010266112640226963
+I'll not talk to you in this form, Lich
+
+@ 2 "Greeting 2" 251455264299987122
+A walking copse. Get out of here, Lich, before I make you even more dead than you already are.
+
+@ 2 "Greeting 2" 230971088107303585
+Fool. Lichdom is not a blessing, but a curse. What is it you want?
+
+@ 2 "Greeting 2" 1379313621490319084
+The stench of undeath follows you like a cloud, vile creature. State your business and be quick about it.
+
+@ 2 "Greeting 2" 3208844462699218640
+I'll tolerate you, undead one, but expect no favours from me.
+
+@ 2 "Greeting 2" 2838917771270516962
+Fool, you think your new form gives you divine power? I'll show you what REAL power is.
+
+@ 2 "Greeting 2" 13082266682696119249
+A Lich, if I'm not mistaken. And a particularly weak one at that. I wonder.... how many Telvanni can boast to have killed a lich?
+
+@ 2 "Greeting 2" 64422062480016487
+What brings you here, Lich?
+
+@ 2 "Greeting 2" 971348212593514331
+Begone, undead one. You'll not show your degenerate face around here again if you know what's good for you.
+
+@ 2 "Greeting 2" 1483146742298311075
+Good Gods, whatever infernal magicks created you, abomination?
+
+@ 2 "Greeting 2" 28701456330130904
+Foul being! I'll take your skull as a trophy!
+
+@ 2 "Greeting 2" 19831899219388650
+Evil beast! I'll take your skull as a trophy!
+
+@ 2 "Greeting 2" 198582870132704388
+What the.... *faints*
+
+@ 2 "Greeting 2" 168811648772149481
+AAAAAAARGH!
+
+@ 2 "Greeting 2" 877375141408627745
+Don't hurt me! HELP!
+
+@ 2 "Greeting 2" 1399217222038615901
+Begone, foul beast. I want nothing to do with you.
+
+@ 2 "Greeting 2" 1522630661894216439
+Cold.... as cold as the grave. Leave me be, Lich
+
+@ 2 "Greeting 2" 46161544227767848
+I don't deal with the undead.
+
+@ 2 "Greeting 2" 2827920090181343006
+Tell me, abomination, what does it feel like to die.... for a second time?
+
+@ 2 "Greeting 2" 22085173612619832489
+You try my patience, undead one. If I see you again, you may not get the chance to regret it.
+
+@ 2 "Greeting 2" 2505528144739511179
+Go back to your grave, before I sent you there. For good.
+
+@ 2 "Greeting 2" 203498155246354417
+Cursed being, your reign of terror ends here!
+
+@ 2 "Greeting 2" 32694297671157015282
+Undead abomination! I shall destroy you where you stand!
+
+# "Attack" ---------------------------------------------------------------------
+@ 1 "Attack" 3154523943128546274
+[null body steal check]
+
+@ 1 "Attack" 7854261741937819301
+[null body steal check]
+
+@ 1 "Attack" 262242813260283981
+[body steal blocker] Alarm of -5 means body steal script is running on an NPC
+
+@ 1 "Attack" 60004384998332387
+[body steal check]
+
+@ 1 "Attack" 3184246871845119220
+[body steal check]
+
+@ 1 "Attack" 239716925144703329
+[body steal check]
+
+@ 1 "Attack" 348420720165882226
+[body steal check]
+
+@ 1 "Attack" 2373120872776819451
+[body steal check]
+
+@ 1 "Attack" 1907651721922510869
+[body steal check]
+
+# "Hello" ----------------------------------------------------------------------
+@ 1 "Hello" 1912419592854912930
+(Nothing) - this occurs when NPC knows player is a lich, and so they 'blank' them. Not wanting to seem friendly, nor be hostile.
+
+@ 1 "Hello" 1313610982532129731
+(Nothing) - this occurs when NPC knows player is a lich, and so they 'blank' them. Not wanting to seem friendly, nor be hostile.
+
+@ 1 "Hello" 354220746786426716
+(Nothing) - this occurs when NPC knows player is a lich, and so they 'blank' them. Not wanting to seem friendly, nor be hostile.
+
+@ 1 "Hello" 3063719811985224834
+(Nothing) - this occurs when NPC knows player is a lich, and so they 'blank' them. Not wanting to seem friendly, nor be hostile.
+
+@ 1 "Hello" 4741211611129530990
+(Nothing) - this occurs when NPC knows player is a lich, and so they 'blank' them. Not wanting to seem friendly, nor be hostile.
+
+@ 1 "Hello" 21020314791806416538
+Hiss!
+
+@ 1 "Hello" 75393457681923060
+Hiss!
+
+@ 1 "Hello" 13805175252915024935
+Aargh! Go away!
+
+@ 1 "Hello" 1533722882178781597
+You don't want to kill me, do you?
+
+@ 1 "Hello" 30211242586716453
+Arrh! Go away!
+
+@ 1 "Hello" 22503161442869921884
+Arrh! Go away!
+
+@ 1 "Hello" 274969992141335547
+I curse you! Away!
+
+@ 1 "Hello" 2042811758302528464
+I curse you! Away!
+
+@ 1 "Hello" 17258125432319816642
+Foul beast! Away with you!
+
+@ 1 "Hello" 275122513686363568
+Foul beast! Away with you!
+
+@ 1 "Hello" 199989421593229993
+Stay away, vile creature!
+
+@ 1 "Hello" 13006752049975121
+Stay away, vile creature!
+
+@ 1 "Hello" 2376830932535213554
+Grrrowl!
+
+@ 1 "Hello" 21561119942821328641
+Grrrowl!
+
+@ 1 "Hello" 1246817292303358099
+Die creature! Be gone with you!
+
+@ 1 "Hello" 6949195361964620672
+Die creature! Be gone with you!
+
+@ 1 "Hello" 30993153609643447
+Unholy beast! Go away!
+
+@ 1 "Hello" 30337149201905911010
+Unholy beast! Go away!
+
+@ 1 "Hello" 2510526392564431771
+No! Go away!
+
+@ 1 "Hello" 39081756114183262
+No!
+
+# "Hit" ------------------------------------------------------------------------
+@ 1 "Hit" 20053310843968281
+[null body steal check]
+
+@ 1 "Hit" 90702659494703538
+[null body steal check]
+
+@ 1 "Hit" 30915259002883827282
+[body steal blocker]
+
+@ 1 "Hit" 4834278942496014471
+[body steal check]
+
+@ 1 "Hit" 15982235381404628852
+[body steal check]
+
+@ 1 "Hit" 782829729197499251
+[body steal check]
+
+@ 1 "Hit" 466728043024910270
+[body steal check]
+
+@ 1 "Hit" 107803642009310091
+[body steal check]
+
+@ 1 "Hit" 838016042104927621
+[body steal check]
+
+# "Avenue of Necromancy" -------------------------------------------------------
+@ 0 "Avenue of Necromancy" 111521819994599911 "vn_power_tutor"
+The avenue of Necromancy grants you the power over life and death. You gain grater ability to raise the dead and maintain your own tattered corpse, even faking your own demise where necessary. The Necromancy avenue is concerned with unnatural control and maintenance of the dead. A powerful necromancer Lich could raise entire armies of undead minions that simply rise again and again when struck down....and whom could stand against such power?
+
+# "Avenue of Psionics" ---------------------------------------------------------
+@ 0 "Avenue of Psionics" 14090226911951431018 "vn_power_tutor"
+Psionics - control of the mind. The Psionic Lich is one who decicates his powers to the manipulation of others - not through persuasion, but directly tampering with the vulnerable thoughts that reside inside their skulls. A Psionic lich can inspire terror or peace at will, corrupt others to his will, or bend the thoughts of the masses in whichever subtle direction he chooses. In a world of mortals, such powers are not to be understated.
+
+# "Avenue of Sorcery" ----------------------------------------------------------
+@ 0 "Avenue of Sorcery" 1393214332347324365 "vn_power_tutor"
+The avenue of Sorcery is the unconditional pursiut of vast and pure magical powers, the deepest darkest secrets of forgotton lore. The very keys to the universe. A Sorcerous Lich cares little for the petty affairs of mortals, or toying with corpses like a foolish puppet master. This Lich focuses instead on his own personal power, so even the magic of a normal Lich would pale in compaison. Powers include unique and powerful spells, improved enchantment ability, and immunity to damage.
+
+# "Avenue of Vampirism" --------------------------------------------------------
+@ 0 "Avenue of Vampirism" 2593117600200645027 "vn_power_tutor"
+Available only to the Vampiric-Lich, the avenue of vampirism is the rogue path of the lich world. Focusing not on knowledge or power in their pure forms, this avenue harnesses the ability of the lich to drain and consume the life force of others for his own ends. A powerful vampiric lich not only harvests his victim's blood, but also his magicka, his skills, and his very soul. This is the fasttrack route to incredible power, but it must be trodden carefully....
+
+# "become a lich" --------------------------------------------------------------
+@ 0 "become a lich" 7724240971199421921
+Why certainly. I'll become a Lich straight away
+
+@ 0 "become a lich" 7533172402713222426
+You ask me to WHAT? Get out of here, %PCName
+
+@ 0 "become a lich" 9518266621217524460
+Probably a wise decision....
+
+@ 0 "become a lich" 10350115301478224438
+[ask %Name to become a lich? You estimate the chance of acceptance to be %vn_convert_chance %]
+
+# "incredibly strong amulet" ---------------------------------------------------
+@ 0 "incredibly strong amulet" 563414497126887514
+Not yet. Come back later
+
+@ 0 "incredibly strong amulet" 62888699506817043
+Yes, I'm just about done. Take care with this.
+
+@ 0 "incredibly strong amulet" 16504319971806127459
+Yes, I thought you might be after that
+
+@ 0 "incredibly strong amulet" 31734232242114015818
+A what? No, I'm afraid I'd have no idea how to craft such a thing.
+
+@ 0 "incredibly strong amulet" 2639730412547013512
+Whilst I'm proud of my handiwork, %PCName, I'm not willing to take on a task that big. You'll have to find someone else
+
+@ 0 "incredibly strong amulet" 467018817257691524
+Hmmm. I'm I'm fully understanding what you're asking for, then that's quite some task. What you're after isn't something that just anybody can put together, %PCName. You really need to be talking to the best in the business.
+
+@ 0 "incredibly strong amulet" 191313548733413590
+Well.... putting together something like that is no trivial task. I'll want payment of 5000GP up front, together with the necessary raw materials. I can give you a list of them. They're mostly strong gemstones and metal ore... nothing too tricky to get hold of, but certainly not cheap. Come back when you have the gold and the ingredients.
+
+@ 0 "incredibly strong amulet" 1721819968438937
+Well, let me know if you change your mind.
+
+@ 0 "incredibly strong amulet" 2005124172115521356
+No you don't. Don't waste my time.
+
+@ 0 "incredibly strong amulet" 77312524171230250
+Be sure to let me know when you do.
+
+@ 0 "incredibly strong amulet" 2729014672273023893
+Excellent. I'll start on it right away. It'll probably take me about a week.
+
+@ 0 "incredibly strong amulet" 29630142472996816128
+Excellent. I'll start on it right away. It'll probably take me about a week.
+
+@ 0 "incredibly strong amulet" 28331122712052911711
+Excellent. I'll start on it right away. It'll probably take me about a week.
+
+@ 0 "incredibly strong amulet" 328529204137715223
+Excellent. I'll start on it right away. It'll probably take me about a week.
+
+@ 0 "incredibly strong amulet" 1944018451115366836
+No you don't. Don't waste my time.
+
+@ 0 "incredibly strong amulet" 16186150842013230431
+Incredibly strong.... yet sensetive to magicka too. Well, you've come to the right place, %PCName, I think I might just be able to help you out. It's not going to be cheap though. And I'll need you to collect a few things for me
+
+@ 0 "incredibly strong amulet" 2896624770133482565
+So, do you have the raw materials and the gold?
+
+# "level" ----------------------------------------------------------------------
+@ 0 "level" 18479112062892726
+[You estimate %Name to be currently at level %vn_magelevel]
+
+# "meet me at" -----------------------------------------------------------------
+@ 0 "meet me at" 1043722939176967402
+I shall meet you at Vivec
+
+@ 0 "meet me at" 18589627440766250
+I Will Meet You At Vivec
+
+@ 0 "meet me at" 313109772441314756
+I shall meet you at Balmora
+
+@ 0 "meet me at" 1315424418150201596
+I Will Meet You At Balmora
+
+@ 0 "meet me at" 21801334978618105
+I shall meet you at Ghostgate
+
+@ 0 "meet me at" 863313094292375885
+I Will Meet You At Ghostgate
+
+@ 0 "meet me at" 2772113781717418130
+I shall meet you at Ald-ruhn
+
+@ 0 "meet me at" 245230669208459861
+I Will Meet You At Ald-ruhn
+
+@ 0 "meet me at" 288112507117016763
+I shall meet you at Gnisis
+
+@ 0 "meet me at" 1640025416552532484
+I Will Meet You At Gnisis
+
+@ 0 "meet me at" 20982231493200724185
+I shall meet you at Dagon Fel
+
+@ 0 "meet me at" 1505187732721725694
+I Will Meet You At Dagon Fel
+
+@ 0 "meet me at" 9618287702088319293
+I shall meet you at Sadrith Mora
+
+@ 0 "meet me at" 16158181074721538
+I Will Meet You At Sadrith Mora
+
+@ 0 "meet me at" 132622711152168025
+Where shall I meet you, my Lord and Master?
+
+@ 0 "meet me at" 729030351065621801
+Where Should I Meet You, Master?
+
+@ 0 "meet me at" 27999144012194912627
+As you wish.
+
+@ 0 "meet me at" 3066013881180922758
+As You Wish
+
+@ 0 "meet me at" 2281432475308495176
+I shall meet you at At Vos
+
+@ 0 "meet me at" 1245421756306535080
+I Will Meet You At Vos
+
+@ 0 "meet me at" 8806177631764511667
+I shall meet you at Valenvaryon
+
+@ 0 "meet me at" 3615096691330288
+I Will Meet You At Valenvaryon
+
+@ 0 "meet me at" 2630132709181456750
+I shall meet you at Molag Mar
+
+@ 0 "meet me at" 1194197653247812832
+I Will Meet You At Molag Mar
+
+@ 0 "meet me at" 1719119282040222039
+I shall meet you at Fort Frostmouth
+
+@ 0 "meet me at" 1723731653253910300
+I Will Meet You At Fort Frostmouth
+
+@ 0 "meet me at" 3228018002820322551
+I shall meet you at Skaal Village
+
+@ 0 "meet me at" 8676142532045921556
+I Will Meet You At Skaal Village
+
+@ 0 "meet me at" 21218191401218815598
+I Will Meet You At Waypoint 1
+
+@ 0 "meet me at" 164032260732651698
+I Will Meet You At Waypoint 2
+
+@ 0 "meet me at" 1587411932767432421
+I Will Meet You At Waypoint 3
+
+@ 0 "meet me at" 184922291101936944
+Where shall I meet you, my Lord and Master?
+
+@ 0 "meet me at" 2319679462717515191
+Where Should I Meet You, Master?
+
+# "mission" --------------------------------------------------------------------
+@ 0 "mission" 23050257702767026359
+As you wish, my liege
+
+@ 0 "mission" 167651361424678515
+I shall seek them straight away
+
+@ 0 "mission" 5697115552780352
+I shall seek them straight away
+
+@ 0 "mission" 25204809431805122
+I shall seek them straight away
+
+@ 0 "mission" 1543228616108966057
+I shall seek them straight away
+
+@ 0 "mission" 2784413788801815846
+I shall seek them straight away
+
+@ 0 "mission" 2077715270315879035
+I shall seek them straight away
+
+@ 0 "mission" 233182505017941491
+I shall seek them straight away
+
+@ 0 "mission" 17371188381876414727
+As you wish, my liege
+
+@ 0 "mission" 491533651933830694
+I cannot begin work until you have chosen the location, Most Powerful One
+
+@ 0 "mission" 23044189422589024346
+Your word is my life, great one. I shall go there and work on the opening chambers at once. I must get some materials first, but you'll find me in the lair after that.
+
+@ 0 "mission" 1066917292224188802
+What else would you have built?
+
+@ 0 "mission" 165313757514731226
+What else would you have built?
+
+@ 0 "mission" 10603186041226412453
+What else would you have built?
+
+@ 0 "mission" 31069109281522913
+What else would you have built?
+
+@ 0 "mission" 2803747362465628310
+What would you have built?
+
+@ 0 "mission" 2191312398631330977
+What would you have built?
+
+@ 0 "mission" 80517519178376390
+What would you have built?
+
+@ 0 "mission" 3084229363063817363
+What would you have built?
+
+@ 0 "mission" 31600227432581625870
+East Side Chamber
+
+@ 0 "mission" 164523816336527835
+West Side Chamber
+
+@ 0 "mission" 14094296221797719928
+Worship Chamber
+
+@ 0 "mission" 2167428803298916793
+Sacrificial Chamber
+
+@ 0 "mission" 12493231031153632243
+Study Chamber
+
+@ 0 "mission" 32062132711743110696
+Main Chamber
+
+@ 0 "mission" 626513737225256402
+Treasure Chamber
+
+@ 0 "mission" 2416231653015021263
+Secret Room
+
+@ 0 "mission" 2331716241602821766
+Okay, I'll not build anything yet.
+
+@ 0 "mission" 12059118272584128387
+I shall assist in the construction. O Master.
+
+@ 0 "mission" 14503699522071910
+It shall be done
+
+@ 0 "mission" 10649274302821126937
+Which ingredients would you have me fetch?
+
+@ 0 "mission" 20654145901005228373
+What is you bidding, most powerful one?
+
+# "Necromancy 1 - Fake Death" --------------------------------------------------
+@ 0 "Necromancy 1 - Fake Death" 9698242632629524483 "vn_power_tutor"
+Returns you to your phylactery, as if you'd died.
+
+# "Necromancy 10 - Unholy Animation" -------------------------------------------
+@ 0 "Necromancy 10 - Unholy Animation" 63142438063032029 "vn_power_tutor"
+A raise dead spell - now you can raise any number per day, so long as you have the ingredients and the magicka. An army of undead, yours to command....
+
+# "Necromancy 2 - Heal Undead Horde" -------------------------------------------
+@ 0 "Necromancy 2 - Heal Undead Horde" 2616411232535027677 "vn_power_tutor"
+A healing spell which will act on your summoned undead minions, restoring their health significantly. It will heal mortals too, but to a much lower degree.
+
+# "Necromancy 3 - Reduce Decay" ------------------------------------------------
+@ 0 "Necromancy 3 - Reduce Decay" 1294645451614615598 "vn_power_tutor"
+Halves the permenant damage your corpse takes when it is damaged severely enough that you are forced to retreat to your phylactery
+
+# "Necromancy 4 - Turn Undead" -------------------------------------------------
+@ 0 "Necromancy 4 - Turn Undead" 1264622090434822773 "vn_power_tutor"
+With this power you are the master of the undead. None shall harm you. Cast this on the most potent you encounter and their attacks will desist immediately.
+
+# "Necromancy 5 - Reanimate Dead" ----------------------------------------------
+@ 0 "Necromancy 5 - Reanimate Dead" 181418531261071387 "vn_power_tutor"
+This will reanimate your dead bonewalkers and skeletons at a touch of your finger... leaving you at the command of a mighty undead legion in which each corpse simply rises again and again, undefeatable...
+
+# "Necromancy 6 - Dissolve Flesh" ----------------------------------------------
+@ 0 "Necromancy 6 - Dissolve Flesh" 283351989627804680 "vn_power_tutor"
+This spell will rot the living flesh from someone's bones, leaving their lifeless skeletal corpse to fall to the ground in a bloody heap.
+
+# "Necromancy 7 - Raise Dead II" -----------------------------------------------
+@ 0 "Necromancy 7 - Raise Dead II" 234123145944646998 "vn_power_tutor"
+The same as the existing raise dead power. With two powers, you can now raise undead twice as often.
+
+# "Necromancy 8 - Regeneration" ------------------------------------------------
+@ 0 "Necromancy 8 - Regeneration" 24184858953818821 "vn_power_tutor"
+Increase influence over life and death allow you to heal your corpse constantly, knitting together tissues and strengthening bones without giving it even an ounce of your concentration.
+
+# "Necromancy 9 - Summon Undead Legion" ----------------------------------------
+@ 0 "Necromancy 9 - Summon Undead Legion" 26682518158944769 "vn_power_tutor"
+Summons a cohort of undead beings to aid you in battle for a short time.
+
+# "powerful enchant spell" -----------------------------------------------------
+@ 0 "powerful enchant spell" 28999152193028411263
+You already know of such a spell, %PCName.
+
+@ 0 "powerful enchant spell" 8521251673049323061
+You already know of such a spell, %PCName.
+
+@ 0 "powerful enchant spell" 18859246841830326534
+You already know of such a spell, %PCName.
+
+@ 0 "powerful enchant spell" 147534001563219551
+You already know of such a spell, %PCName.
+
+@ 0 "powerful enchant spell" 26281174522608911174
+You already know of such a spell, %PCName.
+
+@ 0 "powerful enchant spell" 1424379431577511754
+You already know of such a spell, %PCName.
+
+@ 0 "powerful enchant spell" 12791109841805518
+You already know of such a spell, %PCName.
+
+@ 0 "powerful enchant spell" 20013160841947726969
+You already know of such a spell, %PCName.
+
+@ 0 "powerful enchant spell" 2826685262704614939
+Use this knowledge wisely.
+
+@ 0 "powerful enchant spell" 74438728802012824
+You don't have enough gold
+
+@ 0 "powerful enchant spell" 2398107402365816120
+Let me know if you change your mind
+
+@ 0 "powerful enchant spell" 225262901645922381
+Hmm.... yes I think I know just the thing. It's a spell called 'Mystic Enchant'. Not much good for anything except increasing the magical sensetivity of an object. For 500 gold, I'll teach you how to do it.
+
+@ 0 "powerful enchant spell" 6513114581854217204
+Hmm.... yes I think I know just the thing. It's a spell called 'Mystic Enchant'. Not much good for anything except increasing the magical sensetivity of an object. For 500 gold, I'll teach you how to do it.
+
+@ 0 "powerful enchant spell" 2143327635469114187
+Hmm.... yes I think I know just the thing. It's a spell called 'Mystic Enchant'. Not much good for anything except increasing the magical sensetivity of an object. For 500 gold, I'll teach you how to do it.
+
+@ 0 "powerful enchant spell" 7862246142843025939
+Hmm.... yes I think I know just the thing. It's a spell called 'Mystic Enchant'. Not much good for anything except increasing the magical sensetivity of an object. For 500 gold, I'll teach you how to do it.
+
+@ 0 "powerful enchant spell" 26313179941058324678
+Hmm.... yes I think I know just the thing. It's a spell called 'Mystic Enchant'. Not much good for anything except increasing the magical sensetivity of an object. For 500 gold, I'll teach you how to do it.
+
+@ 0 "powerful enchant spell" 297468724196467655
+Hmm.... yes I think I know just the thing. It's a spell called 'Mystic Enchant'. Not much good for anything except increasing the magical sensetivity of an object. For 500 gold, I'll teach you how to do it.
+
+@ 0 "powerful enchant spell" 113221913699379721
+Hmm.... yes I think I know just the thing. It's a spell called 'Mystic Enchant'. Not much good for anything except increasing the magical sensetivity of an object. For 500 gold, I'll teach you how to do it.
+
+@ 0 "powerful enchant spell" 779526531702313115
+Hmm.... yes I think I know just the thing. It's a spell called 'Mystic Enchant'. Not much good for anything except increasing the magical sensetivity of an object. For 500 gold, I'll teach you how to do it.
+
+# "Psionic 1 - Pacify" ---------------------------------------------------------
+@ 0 "Psionic 1 - Pacify" 19793284401841120284 "vn_power_tutor"
+This will calm many angry creatues and humanoids, who might otherwise wish you significant harm...
+
+# "Psionic 10 - Commanding Touch" ----------------------------------------------
+@ 0 "Psionic 10 - Commanding Touch" 3780146262388924859 "vn_power_tutor"
+A command spell so powerful thet few besides the gods themselves can resist it's potent call
+
+# "Psionic 2 - Beast Detection" ------------------------------------------------
+@ 0 "Psionic 2 - Beast Detection" 116552886829512847 "vn_power_tutor"
+With this ability, you're keenly aware of the very life energy of all creatures around you. Never again will you be caught unawares.
+
+# "Psionic 3 - Reduce Notoriety" -----------------------------------------------
+@ 0 "Psionic 3 - Reduce Notoriety" 4582233381504716203 "vn_power_tutor"
+Instills a common forgetfullness in the minds that make up society... targetted at forgetting your crimes, in particular.
+
+# "Psionic 4 - Summon Packrat" -------------------------------------------------
+@ 0 "Psionic 4 - Summon Packrat" 2443620329285129880 "vn_power_tutor"
+When the master of minds calls, the rat is the first to follow. You'll never be without a companion again. And a helpful one, at that.
+
+# "Psionic 5 - Fearful Aura" ---------------------------------------------------
+@ 0 "Psionic 5 - Fearful Aura" 11151163932424622426 "vn_power_tutor"
+Far fewer will now attack you... more likely they'll turn and run in fear. This power makes those who see you in public turn tail and run instead of attack you. It won't change the reaction of those already determined to kill you though...
+
+# "Psionic 6 - Beast Mastery" --------------------------------------------------
+@ 0 "Psionic 6 - Beast Mastery" 810917665178339109 "vn_power_tutor"
+Summons a rat to aid you... and this is no mere conjuration, this is a live rat who will follow you to the ends of the world or until it's own demise. How many rats does it take to kill Vivec, d'you think?
+
+# "Psionic 7 - Voice Of The Lich" ----------------------------------------------
+@ 0 "Psionic 7 - Voice Of The Lich" 30271906183282457 "vn_power_tutor"
+A call to the mind of restless mages.... bending their thoughts towards you, slowly corrupting them so that they might follow and aid you. This power doesn't grant immediate results when you use it, but results it does indeed grant....
+
+# "Psionic 8 - Terror" ---------------------------------------------------------
+@ 0 "Psionic 8 - Terror" 124509856157595130 "vn_power_tutor"
+The pure evil radiating from your eyes is now so intense that your very gaze can cause the most brave-hearted to turn and run in stark terror...
+
+# "Psionic 9 - Fame" -----------------------------------------------------------
+@ 0 "Psionic 9 - Fame" 53411653149148973 "vn_power_tutor"
+Warps the minds of the many... instilling a deep sense of respect for your disguised self. Your reputation (while disguised) is permenantly increased.
+
+# "recruit me a follower" ------------------------------------------------------
+@ 0 "recruit me a follower" 2696329697610314917
+I will see who I can find. Come back tomorrow
+
+@ 0 "recruit me a follower" 14473255963189210375
+[You decide not to ask]
+
+@ 0 "recruit me a follower" 141502021022726858
+[Ask %Name to try to recruit you a follower?]
+
+@ 0 "recruit me a follower" 2790230250474908
+I'm working on it, check with me in a few days
+
+@ 0 "recruit me a follower" 32765461909631011
+I was unable to persuade anyone suitable
+
+@ 0 "recruit me a follower" 13351135911818929335
+Yes, I did find someone. In fact, he's standing right behind you.
+
+# "return to spirit stone" -----------------------------------------------------
+@ 0 "return to spirit stone" 1418016322186683036 "vn_ancestor_ghost"
+It Shall Be Done
+
+@ 0 "return to spirit stone" 14047709327864562 "vn_ancestor_guardian"
+It Shall Be Done
+
+@ 0 "return to spirit stone" 7241204231634218816 "vn_g_ancestor_ghost"
+It Shall Be Done
+
+@ 0 "return to spirit stone" 506317262104281591 "vn_spectre"
+It Shall Be Done
+
+@ 0 "return to spirit stone" 17716236011084828931 "vn_avenging_phantasm"
+It Shall Be Done
+
+# "reveal your true self" ------------------------------------------------------
+@ 0 "reveal your true self" 17447178463132120702
+[Would be a bit pointless, don't you think?]
+
+@ 0 "reveal your true self" 72177156634066
+[Would be a bit pointless, don't you think?]
+
+@ 0 "reveal your true self" 1179414225624023533
+Probably a good decision....
+
+@ 0 "reveal your true self" 2468632501191696462
+Wha...? I need a moment to take this in.
+
+@ 0 "reveal your true self" 3042127153597630934
+You're a... WHAT? Guards! Help!
+
+@ 0 "reveal your true self" 179142894294629929
+Abomination! Your audacity will be your downfall!
+
+@ 0 "reveal your true self" 5861147552771530014
+I already know of your real form.
+
+@ 0 "reveal your true self" 14757281901207222038
+[Reveal your true self to %Name? You estimate that you can't possibly do so without causing an adverse reaction ]
+
+@ 0 "reveal your true self" 9059308432697318601
+[Reveal your true self to %Name? You estimate that it is certain you can do so safely ]
+
+@ 0 "reveal your true self" 27314160252024014426
+[Reveal your true self to %Name? You estimate the chance of doing so without causing panic to be between %vn_lower_estimate - %vn_upper_estimate% ]
+
+@ 0 "reveal your true self" 11098322342799513399
+TEST -- SHOULDN'T SEE THIS
+
+# "Sorcery 1 - Lunar Magicka" --------------------------------------------------
+@ 0 "Sorcery 1 - Lunar Magicka" 18869232873174312952 "vn_power_tutor"
+With this power, you'll find yourself more powerful after nightfall..... particularly during a full moon.
+
+# "Sorcery 10 - Turn To Chicken" -----------------------------------------------
+@ 0 "Sorcery 10 - Turn To Chicken" 2323430502344325335 "vn_power_tutor"
+When cast on an NPC, there's a very strong chance they'll be turned into a chicken. Try it on fargoth and see what I mean.
+
+# "Sorcery 2 - Explosive Rat" --------------------------------------------------
+@ 0 "Sorcery 2 - Explosive Rat" 26268201553262531044 "vn_power_tutor"
+Summons your very own live rat-bomb. Sometimes it's a dud, but more often than not this rat will explode ferociously when it recieves any damage. Just make sure you are WELL out of the way when it happens.
+
+# "Sorcery 3 - Enchant Mastery" ------------------------------------------------
+@ 0 "Sorcery 3 - Enchant Mastery" 2604628304626019505 "vn_power_tutor"
+Drastically improves your ability to use your Lich powers of enchantcrafting, making you more effective and reducing your link ot the material plane significantly less (i.e. halves your health penalty)
+
+# "Sorcery 4 - Enchantment Detection" ------------------------------------------
+@ 0 "Sorcery 4 - Enchantment Detection" 1821619885100321791 "vn_power_tutor"
+Suddenly you're keenly aware of the presence of any enchanted artefact, even at considerable distances.
+
+# "Sorcery 5 - Resist Normal Weapons" ------------------------------------------
+@ 0 "Sorcery 5 - Resist Normal Weapons" 2776074622918831375
+A healing spell which will act on your summoned undead minions, restoring their health significantly. It will heal mortals too, but to a much lower degree.
+
+@ 0 "Sorcery 5 - Resist Normal Weapons" 35037717209682786 "vn_power_tutor"
+Makes you partially immune to non-enchanted (and non silver) weaponry.
+
+# "Sorcery 6 - Magicka Boon" ---------------------------------------------------
+@ 0 "Sorcery 6 - Magicka Boon" 224239531796422980 "vn_power_tutor"
+A once-per-day ability which significantly boosts your maximum magicka and restoration rate for several minutes.
+
+# "Sorcery 7 - Consume Soul" ---------------------------------------------------
+@ 0 "Sorcery 7 - Consume Soul" 1123242653097923756 "vn_power_tutor"
+If this spell is cast on an NPC before killing them, you will consume their very soul, permanently increasing your own health.
+
+# "Sorcery 8 - Invulnerability" ------------------------------------------------
+@ 0 "Sorcery 8 - Invulnerability" 27884286432108415424 "vn_power_tutor"
+Complete and utter imperviousness to all forms of damage, but only for a short peroid of time...
+
+# "Sorcery 9 - Petrify" --------------------------------------------------------
+@ 0 "Sorcery 9 - Petrify" 2500911447713221864 "vn_power_tutor"
+This spell will reduce your foes to quivering wrecks, barely able to move under their own weight, or that of the equipment they carry.
+
+# "taste of power" -------------------------------------------------------------
+@ 0 "taste of power" 1701420109245574275
+Well... I must admit I am curious
+
+@ 0 "taste of power" 223531997369413422
+Probably a wise decision...
+
+@ 0 "taste of power" 23593287051791121163
+No..... I won't. I mustn't.
+
+@ 0 "taste of power" 27837221311834422763
+Offer %Name a taste of power? You estimate the change of acceptance to be %vn_powerchance%
+
+# "the best in the business" ---------------------------------------------------
+@ 0 "the best in the business" 1868029373718431848
+Well, your best bet is probably Yagak gro-Gluk in Mournhold. He's the finest craftsman I know. You might also try Sirrollus Saccus in Ebonheart. I'm sure there are a few others who are up to the task, but those are the only ones who spring to mind.
+
+# "Vampirism 1 - Improved Vampire Bite" ----------------------------------------
+@ 0 "Vampirism 1 - Improved Vampire Bite" 2545413751217953989 "vn_power_tutor"
+A much more potent version of the usual vampire bite. As an absorb health effect, it will restore both restore your health and gain you blood points, as well as damaging your opponent. Since it's an innate ability, it costs no mana and can be cast any number of times. It can only be used at very close range, however.
+
+# "Vampirism 10 - Blood Rage" --------------------------------------------------
+@ 0 "Vampirism 10 - Blood Rage" 189282866710735610 "vn_power_tutor"
+An immensely powerful ability that will transform you into an unstoppable killing machine for a short time. You can only use this ability once per day.
+
+# "Vampirism 2 - Enhanced Blood Conversion" ------------------------------------
+@ 0 "Vampirism 2 - Enhanced Blood Conversion" 19751237762856020794 "vn_power_tutor"
+Doubles the efficiency with which you convert blood points into magicka.
+
+# "Vampirism 3 - Consume Soul" -------------------------------------------------
+@ 0 "Vampirism 3 - Consume Soul" 93415366578824602 "vn_power_tutor"
+A very powerful ability. If you kill someone whilst this spell is active on them you will consume their soul. You are granted +1 health points permenantly, and you gain a restore magicka effect of 1pt per second for the next 24 hours - this is the only restore magicka effect a Vampiric Lich can have active. There is no limit to the number of health points you can gain in this way, but your maximum magicka restoration rate (per second) is equal to your Vampirism Avenue level. This has no effect on monsters.
+
+# "Vampirism 4 - Absorb Magicka" -----------------------------------------------
+@ 0 "Vampirism 4 - Absorb Magicka" 12390271612582717816 "vn_power_tutor"
+This spell allows you to suck the magicka from your target, and use it for your own ends. A very handy way for a Vampiric Lich to restore magicka. All you need are a few victims...
+(this spell does not work on monsters)
+
+# "Vampirism 5 - Brainwash" ----------------------------------------------------
+@ 0 "Vampirism 5 - Brainwash" 251442991729817717 "vn_power_tutor"
+This will cause the target to be under your command for the duration of the spell
+
+# "Vampirism 6 - Feeding Frenzy" -----------------------------------------------
+@ 0 "Vampirism 6 - Feeding Frenzy" 220784400281639359 "vn_power_tutor"
+When cast, this spell trebles the efficiency at which you gain blood points, for a peroid of 3 minutes. Handy if you've been saving up your food....
+
+# "Vampirism 7 - Daywalker" ----------------------------------------------------
+@ 0 "Vampirism 7 - Daywalker" 2151136421118813258 "vn_power_tutor"
+This makes you immune to sun damage
+
+# "Vampirism 8 - Steal Skills" -------------------------------------------------
+@ 0 "Vampirism 8 - Steal Skills" 105005512174015615 "vn_power_tutor"
+This power, usable once a day, will steal a skill from the NPC it is cast on. He or she will lose one point in a randomly determined skill, whilst you will gain one point in that same skill.
+
+# "Vampirism 9 - Super Speed" --------------------------------------------------
+@ 0 "Vampirism 9 - Super Speed" 443534342581117541 "vn_power_tutor"
+This power can be turned on/off at will. Whilst active, it slowly drains your magicka, but allows you to run as fast as the wind
+
+# "your orders" ----------------------------------------------------------------
+@ 0 "your orders" 3082624681254643760 "vn_bonewalker"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 692436101421316851 "vn_bonewalker_corpse"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 1511511572321588085 "vn_greater_bonewalker"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 2846230517280222984 "vn_bonewolf"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 22103241661119612454 "vn_demonite"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 25765308642345523314 "vn_monstrous_bonewalker"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 2719568011603421711 "vn_ancestor_ghost"
+As You Wish, Master
+
+@ 0 "your orders" 2766924938180728662 "vn_ancestor_guardian"
+As You Wish, Master
+
+@ 0 "your orders" 2236223601222831310 "vn_g_ancestor_ghost"
+As You Wish, Master
+
+@ 0 "your orders" 1840931510646228227 "vn_ghost_phantom"
+As You Wish, Master
+
+@ 0 "your orders" 2342823720284697417 "vn_spectre"
+As You Wish, Master
+
+@ 0 "your orders" 2748213652148998416 "vn_avenging_phantasm"
+As You Wish, Master
+
+@ 0 "your orders" 30166317703104515259 "vn_skeleton_bonelord"
+As You Wish, Master
+
+@ 0 "your orders" 294001676373213964
+As You Wish, Master
+
+@ 0 "your orders" 28580205061362713430 "vn_bonewalker_corpse"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 71173435619515212 "vn_bonewalker"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 2907730915166924328 "vn_greater_bonewalker"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 588899691544313540 "vn_bonewolf"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 322796083607826864 "vn_demonite"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 5229193293048228173 "vn_monstrous_bonewalker"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 177039290103105112 "vn_ancestor_ghost"
+As You Command
+
+@ 0 "your orders" 20597231912958521146 "vn_ancestor_guardian"
+As You Command
+
+@ 0 "your orders" 3692303972742015467 "vn_ghost_phantom"
+As You Command
+
+@ 0 "your orders" 375823809172067243 "vn_g_ancestor_ghost"
+As You Command
+
+@ 0 "your orders" 229121991146017297 "vn_spectre"
+As You Command
+
+@ 0 "your orders" 317976518319049407 "vn_avenging_phantasm"
+As You Command
+
+@ 0 "your orders" 91161185206129731 "vn_skeleton_bonelord"
+As You Command
+
+@ 0 "your orders" 1837927571422710629
+As You Command
+
+@ 0 "your orders" 17159483224022756 "vn_bonewalker_corpse"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 222522331039896592 "vn_bonewalker"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 1221032533478010380 "vn_greater_bonewalker"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 308552966680777955 "vn_bonewolf"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 17526198571311612140 "vn_demonite"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 24379206042701018375 "vn_monstrous_bonewalker"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 1526117756163723600 "vn_ancestor_ghost"
+As You Command.
+
+@ 0 "your orders" 13707291472962230301 "vn_ancestor_guardian"
+As You Command.
+
+@ 0 "your orders" 1096230829987528351 "vn_ghost_phantom"
+As You Command.
+
+@ 0 "your orders" 7654306642185324440 "vn_g_ancestor_ghost"
+As You Command.
+
+@ 0 "your orders" 293995092641131822 "vn_spectre"
+As You Command.
+
+@ 0 "your orders" 3053817842306328165 "vn_avenging_phantasm"
+As You Command.
+
+@ 0 "your orders" 2145615461202138184 "vn_skeleton_bonelord"
+As You Command.
+
+@ 0 "your orders" 2623214573289308688
+As You Command.
+
+@ 0 "your orders" 1137821850131837389 "vn_bonewalker_corpse"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 22856308721547714405 "vn_bonewalker"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 233467444161582098 "vn_greater_bonewalker"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 231321632701025500 "vn_bonewolf"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 1784318058130363099 "vn_demonite"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 3172113648213342 "vn_monstrous_bonewalker"
+[The bonewalker grunts in compliance]
+
+@ 0 "your orders" 68357645264312078 "vn_ancestor_ghost"
+As You Wish, Master
+
+@ 0 "your orders" 2393924948817432139 "vn_ancestor_guardian"
+As You Wish, Master
+
+@ 0 "your orders" 1679427742890916780 "vn_ghost_phantom"
+As You Wish, Master
+
+@ 0 "your orders" 24044144562524811277 "vn_g_ancestor_ghost"
+As You Wish, Master
+
+@ 0 "your orders" 3755161752048210152 "vn_spectre"
+As You Wish, Master
+
+@ 0 "your orders" 26475225382323732348 "vn_avenging_phantasm"
+As You Wish, Master
+
+@ 0 "your orders" 25634268302367532332 "vn_skeleton_bonelord"
+As You Wish, Master
+
+@ 0 "your orders" 1426021578113323762
+As You Wish, Master
+
+@ 0 "your orders" 850739492376421693 "vn_bonewalker_corpse"
+[What will you ask of the bonewalker?]
+
+@ 0 "your orders" 3381247892133626466 "vn_bonewalker"
+[What will you ask of the bonewalker?]
+
+@ 0 "your orders" 579821043449817157 "vn_greater_bonewalker"
+[What will you ask of the bonewalker?]
+
+@ 0 "your orders" 22191275073036015232 "vn_bonewolf"
+[What will you ask of the bonewalker?]
+
+@ 0 "your orders" 164692077638746551 "vn_demonite"
+[What will you ask of the bonewalker?]
+
+@ 0 "your orders" 2573219028164227227 "vn_monstrous_bonewalker"
+[What will you ask of the bonewalker?]
+
+@ 0 "your orders" 780224171705124087 "vn_ancestor_ghost"
+What Is Your Commmand?
+
+@ 0 "your orders" 12980169523811792 "vn_ancestor_guardian"
+What Is Your Commmand?
+
+@ 0 "your orders" 429726799253914716 "vn_ghost_phantom"
+What Is Your Commmand?
+
+@ 0 "your orders" 2798118252639715405 "vn_g_ancestor_ghost"
+What Is Your Commmand?
+
+@ 0 "your orders" 25850151253236784 "vn_spectre"
+What Is Your Commmand?
+
+@ 0 "your orders" 3053421441934423471 "vn_avenging_phantasm"
+What Is Your Commmand?
+
+@ 0 "your orders" 627514196433920187 "vn_skeleton_bonelord"
+What Is Your Commmand?
+
+@ 0 "your orders" 1680716439311263791
+What Is Your Commmand?
+
+@ 0 "your orders" 1042215679227741711
+What Is Your Commmand?
+
