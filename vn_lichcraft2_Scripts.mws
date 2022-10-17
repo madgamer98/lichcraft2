@@ -7680,7 +7680,7 @@ if ( Player->GetHealthGetRatio < 0.2 ) ; maybe check for less than 10%...
 				Player->ModCurrentFatigue temp
 				Player->ModCurrentHealth 1000 
 			endif
-			if ( vn_lich_vamp == 2 )
+			if ( vn_lich_vamp == 1 )
 				; reduce blood
 				if ( vn_blood > 200 )
 					set vn_blood to ( vn_blood / 2 )
