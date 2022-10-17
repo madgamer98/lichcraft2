@@ -9206,7 +9206,7 @@ short GoodbyeOnce
 
 StopCombat
 
-;; MessageBox "Testing That this even executes"
+; MessageBox "Testing That this even executes"
 ; if ( MenuMode == 0 )
 ;	MessageBox "MenuMode off"
 ; else
