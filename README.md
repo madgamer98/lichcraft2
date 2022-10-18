@@ -51,7 +51,7 @@ Claviticus
 - 08 August 2011 - Claviticus published Patch Beta 2, but it's unclear whether abot's scripts have been implemented or not  
 
 IKilledTheDevil  
-- uploaded the mod to the nexus for ease of access once the orignal page went down. Saving the mod from being lost to time.
+- Uploaded the mod to the nexus for ease of access once the orignal page went down. Saving the mod from being lost to time.
      
 <hr />
 
