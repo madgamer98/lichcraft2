@@ -394,6 +394,7 @@ End
 # vn_body_steal_script ========================================================
 Begin vn_body_steal_script
 
+short vn_local_body_script_flag
 short steal
 short stealskill
 short brainwash
@@ -431,6 +432,7 @@ endif
 if ( doonce == 0 )
 	set vn_bodyscript1_flag to 1
 ;	MessageBox "Testing Body Script 1"
+	set vn_local_body_script_flag to 1
 	set alarm to GetAlarm
 	SetAlarm -5
 	set doonce to 1
@@ -440,6 +442,7 @@ if ( state == 10 )
 	SetAlarm alarm ; Have to run it here instead of in the CellChanged if statement, otherwise it will not change the alarm
 	set endtimer to ( endtimer + ( GetSecondsPassed ) )
 	if ( endtimer > 1 )
+		set vn_local_body_script_flag to 0
 		set currenthealth to 0
 		set maxHealth to 0
 		set difference to 0
@@ -728,6 +731,7 @@ End
 # vn_body_steal_script2 ========================================================
 Begin vn_body_steal_script2
 
+short vn_local_body_script_flag
 short steal
 short stealskill
 short brainwash
@@ -765,6 +769,7 @@ endif
 if ( doonce == 0 )
 	set vn_bodyscript2_flag to 1
 ;	MessageBox "Testing Body Script 2"
+	set vn_local_body_script_flag to 1
 	set alarm to GetAlarm
 	SetAlarm -5
 	set doonce to 1
@@ -774,6 +779,7 @@ if ( state == 10 )
 	SetAlarm alarm ; Have to run it here instead of in the CellChanged if statement, otherwise it will not change the alarm
 	set endtimer to ( endtimer + ( GetSecondsPassed ) )
 	if ( endtimer > 1 )
+		set vn_local_body_script_flag to 0
 		set currenthealth to 0
 		set maxHealth to 0
 		set difference to 0
@@ -1062,6 +1068,7 @@ End
 # vn_body_steal_script3 ========================================================
 Begin vn_body_steal_script3
 
+short vn_local_body_script_flag
 short steal
 short stealskill
 short brainwash
@@ -1099,6 +1106,7 @@ endif
 if ( doonce == 0 )
 	set vn_bodyscript3_flag to 1
 ;	MessageBox "Testing Body Script 3"
+	set vn_local_body_script_flag to 1
 	set alarm to GetAlarm
 	SetAlarm -5
 	set doonce to 1
@@ -1108,6 +1116,7 @@ if ( state == 10 )
 	SetAlarm alarm ; Have to run it here instead of in the CellChanged if statement, otherwise it will not change the alarm
 	set endtimer to ( endtimer + ( GetSecondsPassed ) )
 	if ( endtimer > 1 )
+		set vn_local_body_script_flag to 0
 		set currenthealth to 0
 		set maxHealth to 0
 		set difference to 0
@@ -1396,6 +1405,7 @@ End
 # vn_body_steal_script4 ========================================================
 Begin vn_body_steal_script4
 
+short vn_local_body_script_flag
 short steal
 short stealskill
 short brainwash
@@ -1433,6 +1443,7 @@ endif
 if ( doonce == 0 )
 	set vn_bodyscript4_flag to 1
 ;	MessageBox "Testing Body Script 4"
+	set vn_local_body_script_flag to 1
 	set alarm to GetAlarm
 	SetAlarm -5
 	set doonce to 1
@@ -1442,6 +1453,7 @@ if ( state == 10 )
 	SetAlarm alarm ; Have to run it here instead of in the CellChanged if statement, otherwise it will not change the alarm
 	set endtimer to ( endtimer + ( GetSecondsPassed ) )
 	if ( endtimer > 1 )
+		set vn_local_body_script_flag to 0
 		set currenthealth to 0
 		set maxHealth to 0
 		set difference to 0
@@ -1730,6 +1742,7 @@ End
 # vn_body_steal_script5 ========================================================
 Begin vn_body_steal_script5
 
+short vn_local_body_script_flag
 short steal
 short stealskill
 short brainwash
@@ -1767,6 +1780,7 @@ endif
 if ( doonce == 0 )
 	set vn_bodyscript5_flag to 1
 ;	MessageBox "Testing Body Script 5"
+	set vn_local_body_script_flag to 1
 	set alarm to GetAlarm
 	SetAlarm -5
 	set doonce to 1
@@ -1776,6 +1790,7 @@ if ( state == 10 )
 	SetAlarm alarm ; Have to run it here instead of in the CellChanged if statement, otherwise it will not change the alarm
 	set endtimer to ( endtimer + ( GetSecondsPassed ) )
 	if ( endtimer > 1 )
+		set vn_local_body_script_flag to 0
 		set currenthealth to 0
 		set maxHealth to 0
 		set difference to 0
