@@ -1,10 +1,10 @@
 # The Elder Scrolls III MORROWIND: Lichcraft 2 Patch V 2.00
 
 ## Contents:
-1. Description
-2. Installation
-3. Additional Patch Credits
-4. Original Credits
+1. [Description](/README.md#description)
+2. [Installation](/README.md#installation)
+3. [Additional Patch Credits](/README.md#additional-patch-credits)
+4. [Original Credits](/README.md#additional-patch-credits)
 
 <hr />
 
