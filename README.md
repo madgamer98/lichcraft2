@@ -2,7 +2,7 @@
 
 ## Contents:
 1. [Description](/README.md#description)
-2. [Installation](/README.md#installation)
+2. [Installation](/README.md#installing-the-plugin)
 3. [Additional Patch Credits](/README.md#additional-patch-credits)
 4. [Original Credits](/README.md#additional-patch-credits)
 
