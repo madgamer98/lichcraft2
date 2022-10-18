@@ -20,9 +20,10 @@ overwriting the vn_lichcraft2.esp.
 This mod requires both Tribunal and Bloodmoon to be installed.
 It also requires the base lichcraft 2 mod files.
 
-There is 1 .esp included with this plugin.
+There are 2 .esp included with this plugin.
 
 vn_lichcraft2.esp - default. When you become a Lich, you lose the ability to use certain clothing slots 
+vn_lichcraft2_alt.esp - Alternative. When you become a Lich you may use any equipment slot, but your original appearance is forever lost.
 
 *****************************************************************
      2. Patch Changelog
