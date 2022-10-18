@@ -54,7 +54,7 @@ Claviticus
 
 IKilledTheDevil  
 - Uploaded the mod to the nexus for ease of access once the orignal page went down. Saving the mod from being lost to time.
-- [Nexus Link](https://www.nexusmods.com/morrowind/mods/42945)
+- [Nexus Link to mod](https://www.nexusmods.com/morrowind/mods/42945)
      
 <hr />
 
