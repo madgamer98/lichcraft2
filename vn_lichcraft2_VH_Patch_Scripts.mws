@@ -1,0 +1,1238 @@
+# vn_lichspelladd =============================================================
+Begin vn_lichspelladd
+
+; is this script overcrowded? shoudl I split it?
+
+long pclev
+long temp
+long temp2
+short state
+short active
+; 5
+
+short pnf_fake_death
+short pnf_heal_undead
+short pnf_reduced_decay	; non-spell power
+short pnf_turn_undead
+short pnf_reanimate
+short pnf_dissolve_flesh
+short pnf_raise_dead2
+short pnf_regeneration
+short pnf_undead_legion
+short pnf_unholy_animation
+; 15
+
+short psf_lunar_magicka	; in other script
+short psf_explosive_rat
+short psf_enchant_mastery	; non-spell power
+short psf_detection
+short psf_resist_weapons
+short psf_magicka_boon
+short psf_consume_soul
+short psf_godmode
+short psf_petrify 
+short psf_chicken
+; 25
+
+short ppf_pacify
+short ppf_beast_detect
+short ppf_reduce_bounty
+short ppf_packrat
+; short ppf_fear_aura	; non-spell power
+short ppf_beast_mastery
+short ppf_voice_of_the_lich
+short ppf_terror
+short ppf_fame
+short ppf_command
+; 37
+
+short pvf_bloodrage
+short pvf_stealskills
+short xxx ; 32
+short xxxx ; 33
+short xxxxx ; 34
+short pvf_superspeed 
+short pvf_frenzy
+; short pvf_daywalking
+short pvf_brainwash
+short pvf_vampbite
+short pvf_absorbmagicka
+short pvf_consume
+; 45
+
+short levelcount
+
+if ( active == 0 )
+	return
+endif
+
+if ( state == 0 )
+	set state to 1
+endif
+
+if ( state == 1 )
+	; MessageBox "state 1"
+	if ( vn_lich_vamp == 1 )
+		if ( vn_blood > 1475 )
+			set temp2 to 10
+		elseif ( vn_blood > 1225 )
+			set temp2 to 9
+		elseif ( vn_blood > 1000 )
+			set temp2 to 8
+		elseif ( vn_blood > 800 )
+			set temp2 to 7
+		elseif ( vn_blood > 625 )
+			set temp2 to 6
+		elseif ( vn_blood > 475 )
+			set temp2 to 5
+		elseif ( vn_blood > 350 )
+			set temp2 to 4
+		elseif ( vn_blood > 250 )
+			set temp2 to 3
+		elseif ( vn_blood > 175 )
+			set temp2 to 2
+		elseif ( vn_blood > 125 )
+			set temp2 to 1
+		else
+			set temp2 to 0
+		endif
+		set pclev to ( temp2 * 5 ) 
+		set pclev to ( pclev + 1 )
+		; 4, 9, 14 etc.... so 1 = 1st bonus set.
+		; MessageBox "Adjusted pclevel is %.2f", pclev
+		set temp to ( temp2 + 1 )
+	else
+		set temp to ( vn_avenue_sorcery - 7 )
+		set temp2 to ( temp * 2 )
+		set temp to ( Player->GetLevel )
+		set pclev to ( temp + temp2 ) ; sorcery skill compensation
+		if ( pclev <= 0 )
+			set pclev to 1 
+		endif
+		; MessageBox "Adjusted pclevel is %.2f", pclev
+		if ( pclev < 5 )
+			set temp to 1
+		elseif ( pclev < 10 )
+			set temp to 2
+		elseif ( pclev < 15 )
+			set temp to 3
+		elseif ( pclev < 20 )
+			set temp to 4
+		elseif ( pclev < 25 )
+			set temp to 5
+		elseif ( pclev < 30 )
+			set temp to 6
+		elseif ( pclev < 35 )
+			set temp to 7
+		elseif ( pclev < 40 )
+			set temp to 8
+		elseif ( pclev < 45 )
+			set temp to 9
+		elseif ( pclev < 50 )
+			set temp to 10
+		elseif ( pclev < 55 )
+			set temp to 11
+		elseif ( pclev < 60 )
+			set temp to 12
+		elseif ( pclev < 65 )
+			set temp to 13
+		elseif ( pclev < 70 )
+			set temp to 14
+		elseif ( pclev < 75 )
+			set temp to 15
+		else
+			set temp to 16
+		endif
+		; set HERE
+	endif
+
+	; TEMP now holds multiplyer.
+	set temp2 to 0 ; override flag.
+	if ( temp == 0 )
+		set temp2 to 1
+	endif
+
+	set state to 21
+endif
+
+; ADD GCD STUFF
+if ( state == 21 )
+	; Check the bonuses aren't already there before you apply changes!
+	; MessageBox "State 21"
+
+	; attribute bonuses (will, int) are functions of the Player's level /5
+	; 0 = 1
+	; 1 = 5
+	; 2 = 10
+	if ( Player->GetSpell "vn_lichattrlev1" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev5" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev10" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev15" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev20" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev25" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev30" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev35" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev40" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev45" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev50" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev55" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev60" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev65" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev70" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichattrlev75" == 1 )
+		set temp2 to 1
+	endif
+
+	; MessageBox "21 using"
+
+	if ( temp2 != 1 )
+		if ( temp == 1 )
+			set Gals_Natural_Willpower to ( Gals_Natural_Willpower + 1 )
+			set Gals_Natural_Intelligence to ( Gals_Natural_Intelligence + 1 )
+		else
+			set temp to ( temp - 1 )
+			set temp2 to ( temp * 5 )
+			set Gals_Natural_Willpower to ( Gals_Natural_Willpower + temp2 )
+			set Gals_Natural_Intelligence to ( Gals_Natural_Intelligence + temp2 )
+			set temp to ( temp + 1 )
+		endif
+	endif
+	set state to 22
+	set temp2 to 0
+
+	; MessageBox "21 ending"
+endif
+
+if ( state == 22 )
+	; now the attributes
+	; MessageBox "22 starting"
+	if ( Player->GetSpell "vn_lichskillslev1" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev5" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev10" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev15" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev20" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev25" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev30" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev35" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev40" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev45" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev50" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev55" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev60" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev65" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev70" == 1 )
+		set temp2 to 1
+	elseif ( Player->GetSpell "vn_lichskillslev75" == 1 )
+		set temp2 to 1
+	endif
+
+	; MessageBox "22 using"
+
+	if ( temp2 != 1 )
+		if ( temp == 1 )
+			set Gals_Natural_Alchemy to ( Gals_Natural_Alchemy + 1 )
+			set Gals_Natural_Restoration to ( Gals_Natural_Restoration + 1 )
+			set Gals_Natural_Alteration to ( Gals_Natural_Alteration + 1 )
+			set Gals_Natural_Destruction to ( Gals_Natural_Destruction + 1 )
+			set Gals_Natural_Enchant to ( Gals_Natural_Enchant + 1 )
+			set Gals_Natural_Mysticism to ( Gals_Natural_Mysticism + 1 )
+			set Gals_Natural_Conjuration to ( Gals_Natural_Conjuration + 1 )
+			set Gals_Natural_Illusion to ( Gals_Natural_Illusion + 1 )
+		else
+			set temp to ( temp - 1 )
+			set temp2 to ( temp * 4 )
+			set Gals_Natural_Alchemy to ( Gals_Natural_Alchemy + temp2 )
+			set Gals_Natural_Restoration to ( Gals_Natural_Restoration + temp2 )
+			set temp2 to ( temp * 5 )
+			set Gals_Natural_Alteration to ( Gals_Natural_Alteration + temp2 )
+			set Gals_Natural_Destruction to ( Gals_Natural_Destruction + temp2 )
+			set Gals_Natural_Enchant to ( Gals_Natural_Enchant + temp2 )
+			set Gals_Natural_Mysticism to ( Gals_Natural_Mysticism + temp2 )
+			set temp2 to ( temp * 6 )
+			set Gals_Natural_Conjuration to ( Gals_Natural_Conjuration + temp2 )
+			set Gals_Natural_Illusion to ( Gals_Natural_Illusion + temp2 )
+			set temp to ( temp + 1 )
+		endif
+	endif
+	; MessageBox "22 ending"
+	set state to 2
+endif
+
+if ( state == 2 )
+
+	if ( vn_lich_vamp == 1 ) ; Readd vampire attribute bonuses
+        if ( VampClan == 1 ) ; Vampire hunger moves the attribute fortification for vampire clans into it's own spell and leaves the original with only skill buffs
+            if ( Player->GetSpell "VH_Special_Aundae" == 1 )
+                Player->RemoveSpell "VH_Special_Aundae"
+            endif
+        endif
+        if ( VampClan == 2 )
+            if ( Player->GetSpell "VH_Special_Berne" == 1 )
+                Player->RemoveSpell "VH_Special_Berne"
+            endif
+        endif
+        if ( VampClan == 3 )
+            if ( Player->GetSpell "VH_Spell_Quarra" == 1 )
+                Player->RemoveSpell "VH_Spell_Quarra"
+            endif
+        endif
+		if ( Player->GetSpell "vampire attributes" == 0 )
+			Player->AddSpell "vampire attributes"
+		endif
+	endif
+
+	if ( pclev < 5 )
+		; MessageBox "Adding bonuses 1"
+		if ( Player->GetSpell "vn_lichattrlev1" == 0 )
+			Player->AddSpell "vn_lichattrlev1"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev1" == 0 )
+			Player->AddSpell "vn_lichskillslev1"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev1" == 0 )
+			Player->AddSpell "vn_lichbonuslev1"
+		endif
+	elseif ( pclev < 10 )
+		; MessageBox "Adding bonuses 5"
+		if ( Player->GetSpell "vn_lichattrlev5" == 0 )
+			Player->AddSpell "vn_lichattrlev5"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev5" == 0 )
+			Player->AddSpell "vn_lichskillslev5"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev5" == 0 )
+			Player->AddSpell "vn_lichbonuslev5"
+		endif
+	elseif ( pclev < 15 )
+		; MessageBox "Adding bonuses 10"
+		if ( Player->GetSpell "vn_lichattrlev10" == 0 )
+			Player->AddSpell "vn_lichattrlev10"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev10" == 0 )
+			Player->AddSpell "vn_lichskillslev10"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev10" == 0 )
+			Player->AddSpell "vn_lichbonuslev10"
+		endif
+	elseif ( pclev < 20 )
+		; MessageBox "Adding bonuses 15"
+		if ( Player->GetSpell "vn_lichattrlev15" == 0 )
+			Player->AddSpell "vn_lichattrlev15"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev15" == 0 )
+			Player->AddSpell "vn_lichskillslev15"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev15" == 0 )
+			Player->AddSpell "vn_lichbonuslev15"
+		endif
+	elseif ( pclev < 25 ) 
+		; MessageBox "Adding bonuses 20"
+		if ( Player->GetSpell "vn_lichattrlev20" == 0 )
+			Player->AddSpell "vn_lichattrlev20"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev20" == 0 )
+			Player->AddSpell "vn_lichskillslev20"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev20" == 0 )
+			Player->AddSpell "vn_lichbonuslev20"
+		endif
+	elseif ( pclev < 30 )
+		; MessageBox "Adding bonuses 25"
+		if ( Player->GetSpell "vn_lichattrlev25" == 0 )
+			Player->AddSpell "vn_lichattrlev25"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev25" == 0 )
+			Player->AddSpell "vn_lichskillslev25"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev25" == 0 )
+			Player->AddSpell "vn_lichbonuslev25"
+		endif
+	elseif ( pclev < 35 ) 
+		; MessageBox "Adding bonuses 30"
+		if ( Player->GetSpell "vn_lichattrlev30" == 0 )
+			Player->AddSpell "vn_lichattrlev30"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev30" == 0 )
+			Player->AddSpell "vn_lichskillslev30"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev30" == 0 )
+			Player->AddSpell "vn_lichbonuslev30"
+		endif
+	elseif ( pclev < 40 )
+		; MessageBox "Adding bonuses 35"
+		if ( Player->GetSpell "vn_lichattrlev35" == 0 )
+			Player->AddSpell "vn_lichattrlev35"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev35" == 0 )
+			Player->AddSpell "vn_lichskillslev35"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev35" == 0 )
+			Player->AddSpell "vn_lichbonuslev35"
+		endif
+	elseif ( pclev < 45 ) 
+		; MessageBox "Adding bonuses 40"
+		if ( Player->GetSpell "vn_lichattrlev40" == 0 )
+			Player->AddSpell "vn_lichattrlev40"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev40" == 0 )
+			Player->AddSpell "vn_lichskillslev40"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev40" == 0 )
+			Player->AddSpell "vn_lichbonuslev40"
+		endif
+	elseif ( pclev < 50 )
+		; MessageBox "Adding bonuses 45"
+		if ( Player->GetSpell "vn_lichattrlev45" == 0 )
+			Player->AddSpell "vn_lichattrlev45"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev45" == 0 )
+			Player->AddSpell "vn_lichskillslev45"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev45" == 0 )
+			Player->AddSpell "vn_lichbonuslev45"
+		endif
+	elseif ( pclev < 55 )
+		; MessageBox "Adding bonuses 50"
+		if ( Player->GetSpell "vn_lichattrlev50" == 0 )
+			Player->AddSpell "vn_lichattrlev50"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev50" == 0 )
+			Player->AddSpell "vn_lichskillslev50"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev50" == 0 )
+			Player->AddSpell "vn_lichbonuslev50"
+		endif	
+	elseif ( pclev < 60 )
+		; MessageBox "Adding bonuses 55"
+		if ( Player->GetSpell "vn_lichattrlev55" == 0 )
+			Player->AddSpell "vn_lichattrlev55"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev55" == 0 )
+			Player->AddSpell "vn_lichskillslev55"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev55" == 0 )
+			Player->AddSpell "vn_lichbonuslev55"
+		endif
+	elseif ( pclev < 65 ) 
+		; MessageBox "Adding bonuses 60"
+		if ( Player->GetSpell "vn_lichattrlev60" == 0 )
+			Player->AddSpell "vn_lichattrlev60"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev60" == 0 )
+			Player->AddSpell "vn_lichskillslev60"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev60" == 0 )
+			Player->AddSpell "vn_lichbonuslev60"
+		endif
+	elseif ( pclev < 70 )
+		; MessageBox "Adding bonuses 65"
+		if ( Player->GetSpell "vn_lichattrlev65" == 0 )
+			Player->AddSpell "vn_lichattrlev65"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev65" == 0 )
+			Player->AddSpell "vn_lichskillslev65"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev65" == 0 )
+			Player->AddSpell "vn_lichbonuslev65"
+		endif
+	elseif ( pclev < 75 ) 
+		; MessageBox "Adding bonuses 70"
+		if ( Player->GetSpell "vn_lichattrlev70" == 0 )
+			Player->AddSpell "vn_lichattrlev70"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev70" == 0 )
+			Player->AddSpell "vn_lichskillslev70"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev70" == 0 )
+			Player->AddSpell "vn_lichbonuslev70"
+		endif
+	else
+		; MessageBox "Adding bonuses 75"
+		if ( Player->GetSpell "vn_lichattrlev75" == 0 )
+			Player->AddSpell "vn_lichattrlev75"
+		endif
+		if ( Player->GetSpell "vn_lichskillslev75" == 0 )
+			Player->AddSpell "vn_lichskillslev75"
+		endif
+		if ( Player->GetSpell "vn_lichbonuslev75" == 0 )
+			Player->AddSpell "vn_lichbonuslev75"
+		endif
+	endif
+	set state to 3
+endif
+
+if ( state == 3 )
+	; lichgood is now dependant on sorcery level
+	if ( vn_avenue_sorcery == 0 )
+		if ( Player->GetSpell "vn_lichgood0" == 0 )
+			Player->AddSpell "vn_lichgood0"
+		endif
+	elseif ( vn_avenue_sorcery == 1 )
+		if ( Player->GetSpell "vn_lichgood1" == 0 )
+			Player->AddSpell "vn_lichgood1"
+		endif
+	elseif ( vn_avenue_sorcery == 2 )
+		if ( Player->GetSpell "vn_lichgood2" == 0 )
+			Player->AddSpell "vn_lichgood2"
+		endif
+	elseif ( vn_avenue_sorcery == 3 )
+		if ( Player->GetSpell "vn_lichgood3" == 0 )
+			Player->AddSpell "vn_lichgood3"
+		endif
+	elseif ( vn_avenue_sorcery == 4 )
+		if ( Player->GetSpell "vn_lichgood4" == 0 )
+			Player->AddSpell "vn_lichgood4"
+		endif
+	elseif ( vn_avenue_sorcery == 5 )
+		if ( Player->GetSpell "vn_lichgood5" == 0 )
+			Player->AddSpell "vn_lichgood5"
+		endif
+	elseif ( vn_avenue_sorcery == 6 )
+		if ( Player->GetSpell "vn_lichgood6" == 0 )
+			Player->AddSpell "vn_lichgood6"
+		endif
+	elseif ( vn_avenue_sorcery == 7 )
+		if ( Player->GetSpell "vn_lichgood7" == 0 )
+			Player->AddSpell "vn_lichgood7"
+		endif
+	elseif ( vn_avenue_sorcery == 8 )
+		if ( Player->GetSpell "vn_lichgood8" == 0 )
+			Player->AddSpell "vn_lichgood8"
+		endif
+	elseif ( vn_avenue_sorcery == 9 )
+		if ( Player->GetSpell "vn_lichgood9" == 0 )
+			Player->AddSpell "vn_lichgood9"
+		endif
+	elseif ( vn_avenue_sorcery == 10 )
+		if ( Player->GetSpell "vn_lichgood10" == 0 )
+			Player->AddSpell "vn_lichgood10"
+		endif
+	elseif ( vn_avenue_sorcery == 11 )
+		if ( Player->GetSpell "vn_lichgood11" == 0 )
+			Player->AddSpell "vn_lichgood11"
+		endif
+	elseif ( vn_avenue_sorcery > 11 )
+		if ( Player->GetSpell "vn_lichgood12" == 0 )
+			Player->AddSpell "vn_lichgood12"
+		endif
+	endif
+	set state to 4
+endif
+
+if ( state == 4 )
+	if ( Player->GetSpell "vn_lichimmunities" == 0 )
+		Player->AddSpell "vn_lichimmunities"
+	endif
+	if ( Player->GetSpell "vn_lich_spellmaking" == 0 )
+		Player->AddSpell "vn_lich_spellmaking"
+	endif
+	if ( Player->GetSpell "vn_lich_enchanting" == 0 )
+		Player->AddSpell "vn_lich_enchanting"
+	endif
+	if ( Player->GetSpell "vn_power_ritual_spell" == 0 )
+		Player->AddSpell "vn_power_ritual_spell"
+	endif
+	if ( Player->GetSpell "vn_bodysteal" == 0 )
+		Player->AddSpell "vn_bodysteal"
+	endif
+	if ( Player->GetSpell "vn_raise_dead" == 0 )
+		Player->AddSpell "vn_raise_dead"
+	endif
+	if ( Player->GetSpell "vn_follower_teleport" == 0 )
+		Player->AddSpell "vn_follower_teleport"
+	endif
+;	if ( Player->GetSpell "vn_set_waypoint" == 0 )
+;		Player->AddSpell "vn_set_waypoint"
+;	endif
+	if ( Player->GetSpell "vn_lichbad" == 0 )
+		Player->AddSpell "vn_lichbad"
+		set Gals_Natural_Strength to ( Gals_Natural_Strength - 15 )
+		set Gals_Natural_Agility to ( Gals_Natural_Agility - 25 )
+		set Gals_Natural_Personality to ( Gals_Natural_Personality - 100 )
+	endif
+	if ( vn_wearinglich == 1 ) ; if ( lich add disguise spell )
+		if ( Player->GetSpell "vn_lich_transform" == 0 )
+			Player->AddSpell "vn_lich_transform"
+		endif
+		Player->RemoveSpell "vn_lich_transform_back"
+		Player->RemoveSpell "vn_lichcurse"
+	endif
+	if ( vn_wearinglich == 0 ) ; if ( disguised ( should not happen but might  add revert and disguise penalty )
+		Player->RemoveSpell "vn_lich_transform"
+		if ( Player->GetSpell "vn_lich_transform_back" == 0 )
+			Player->AddSpell "vn_lich_transform_back"
+		endif
+		if ( Player->GetSpell "vn_lichcurse" == 0 )
+			Player->AddSpell "vn_lichcurse"	
+		endif
+	endif
+	if ( vn_lich_vamp == 1 )
+		if ( Player->GetSpell "vn_pv_bloodconversion_ON" == 0 )
+			Player->AddSpell "vn_pv_bloodconversion_ON"
+		endif
+	endif
+	set state to 5
+endif
+
+if ( state == 5 )
+	if ( pnf_fake_death > 0 )
+		if ( Player->GetSpell "vn_pn_fake_death" == 0 )
+			Player->AddSpell "vn_pn_fake_death"
+		endif
+	endif
+	if ( pnf_heal_undead > 0 )
+		if ( Player->GetSpell "vn_pn_heal_undead_horde" == 0 )
+			Player->AddSpell "vn_pn_heal_undead_horde"
+		endif
+	endif
+	if ( pnf_turn_undead > 0 )
+		if ( Player->GetSpell "vn_pn_turn_undead" == 0 )
+			Player->AddSpell "vn_pn_turn_undead"
+		endif
+	endif
+	if ( pnf_reanimate > 0 )
+		if ( Player->GetSpell "vn_pn_reanimate" == 0 )
+			Player->AddSpell "vn_pn_reanimate"
+		endif
+	endif
+	if ( pnf_dissolve_flesh > 0 )
+		if ( Player->GetSpell "vn_pn_dissolve_flesh" == 0 )
+			Player->AddSpell "vn_pn_dissolve_flesh"
+		endif
+	endif
+	if ( pnf_raise_dead2 > 0 )
+		if ( Player->GetSpell "vn_pn_raise_dead" == 0 )
+			Player->AddSpell "vn_pn_raise_dead"
+		endif
+	endif
+	if ( pnf_regeneration > 0 )
+		if ( Player->GetSpell "vn_pn_regeneration" == 0 )
+			Player->AddSpell "vn_pn_regeneration"
+		endif
+	endif
+	if ( pnf_undead_legion > 0 )
+		if ( Player->GetSpell "vn_pn_undead_legion" == 0 )
+			Player->AddSpell "vn_pn_undead_legion"
+		endif
+	endif
+	if ( pnf_unholy_animation > 0 )
+		if ( Player->GetSpell "vn_pn_unholy_animation" == 0 )
+			Player->AddSpell "vn_pn_unholy_animation"
+		endif
+	endif
+	set state to 6
+endif
+
+if ( state == 6 )
+	if ( psf_explosive_rat > 0 )
+		if ( Player->GetSpell "vn_ps_explosive_rat" == 0 )
+			Player->AddSpell "vn_ps_explosive_rat"
+		endif
+	endif
+	if ( psf_detection > 0 )
+		if ( Player->GetSpell "vn_ps_detect" == 0 )
+			Player->AddSpell "vn_ps_detect"
+		endif
+	endif
+	if ( psf_resist_weapons > 0 )
+		if ( Player->GetSpell "vn_ps_resist_weapons" == 0 )
+			Player->AddSpell "vn_ps_resist_weapons"
+		endif
+	endif
+	if ( psf_magicka_boon > 0 )
+		if ( Player->GetSpell "vn_ps_magicka_boon" == 0 )
+			Player->AddSpell "vn_ps_magicka_boon"
+		endif
+	endif
+	if ( psf_consume_soul > 0 )
+		if ( Player->GetSpell "vn_ps_consume_soul" == 0 )
+			Player->AddSpell "vn_ps_consume_soul"
+		endif
+	endif
+	if ( psf_godmode > 0 )
+		if ( Player->GetSpell "vn_ps_godmode" == 0 )
+			Player->AddSpell "vn_ps_godmode"
+		endif
+	endif
+	if ( psf_petrify > 0 )
+		if ( Player->GetSpell "vn_ps_petrify" == 0 )
+			Player->AddSpell "vn_ps_petrify"
+		endif
+	endif
+	if ( psf_chicken > 0 )
+		if ( Player->GetSpell "vn_ps_chicken" == 0 )
+			Player->AddSpell "vn_ps_chicken"
+		endif
+	endif
+	set state to 7
+endif
+
+if ( state == 7 )
+	if ( ppf_pacify > 0 )
+		if ( Player->GetSpell "vn_pp_peace" == 0 )
+			Player->AddSpell "vn_pp_peace"
+		endif
+	endif
+	if ( ppf_beast_detect > 0 )
+		if ( Player->GetSpell "vn_pp_beast_detect" == 0 )
+			Player->AddSpell "vn_pp_beast_detect"
+		endif
+	endif
+	if ( ppf_reduce_bounty > 0 )
+		if ( Player->GetSpell "vn_pp_reduce_notoriety" == 0 )
+			Player->AddSpell "vn_pp_reduce_notoriety"
+		endif
+	endif
+	if ( ppf_packrat > 0 )
+		if ( Player->GetSpell "vn_pp_packrat" == 0 )
+			Player->AddSpell "vn_pp_packrat"
+		endif
+	endif
+	if ( ppf_beast_mastery > 0 )
+		if ( Player->GetSpell "vn_pp_beast_mastery" == 0 )
+			Player->AddSpell "vn_pp_beast_mastery"
+		endif
+	endif
+	if ( ppf_voice_of_the_lich > 0 )
+		if ( Player->GetSpell "vn_pp_voice" == 0 )
+			Player->AddSpell "vn_pp_voice"
+		endif
+	endif
+	if ( ppf_terror > 0 )
+		if ( Player->GetSpell "vn_pp_terror" == 0 )
+			Player->AddSpell "vn_pp_terror"
+		endif
+	endif
+	if ( ppf_fame > 0 )
+		if ( Player->GetSpell "vn_pp_fame" == 0 )
+			Player->AddSpell "vn_pp_fame"
+		endif
+	endif
+	if ( ppf_command > 0 )
+		if ( Player->GetSpell "vn_pp_command" == 0 )
+			Player->AddSpell "vn_pp_command"
+		endif
+	endif
+	set state to 8
+endif
+
+if ( state == 8 )
+	; MessageBox "state 8"
+	if ( pvf_bloodrage > 0 )
+		if ( Player->GetSpell "vn_pv_bloodrage" == 0 )
+			Player->AddSpell "vn_pv_bloodrage"
+		endif
+	endif
+	if ( pvf_stealskills > 0 )
+		if ( Player->GetSpell "vn_pv_stealskills" == 0 )
+			Player->AddSpell "vn_pv_stealskills"
+		endif
+	endif
+	if ( pvf_superspeed > 0 )
+		if ( Player->GetSpell "vn_pv_superspeed_ON" == 0 )
+			Player->AddSpell "vn_pv_superspeed_ON"
+		endif
+		if ( Player->GetSpell "vn_pv_superspeed_OFF" == 0 )
+			Player->AddSpell "vn_pv_superspeed_OFF"
+		endif
+	endif
+	if ( pvf_frenzy > 0 )
+		if ( Player->GetSpell "vn_pv_frenzy" == 0 )
+			Player->AddSpell "vn_pv_frenzy"
+		endif
+	endif
+	if ( pvf_brainwash > 0 )
+		if ( Player->GetSpell "vn_pv_brainwash" == 0 )
+			Player->AddSpell "vn_pv_brainwash"
+		endif
+	endif
+	if ( pvf_vampbite > 0 )
+		if ( Player->GetSpell "vn_pv_vampbite" == 0 )
+			Player->AddSpell "vn_pv_vampbite"
+		endif
+	endif
+	if ( pvf_absorbmagicka > 0 )
+		if ( Player->GetSpell "vn_pv_absorbmagicka" == 0 )
+			Player->AddSpell "vn_pv_absorbmagicka"
+		endif
+	endif
+	if ( pvf_consume > 0 )
+		if ( Player->GetSpell "vn_pv_consume" == 0 )
+			Player->AddSpell "vn_pv_consume"
+		endif
+	endif
+
+	; MessageBox "End state 8"
+	set state to 9
+endif
+
+if ( state == 9 )
+	; MessageBox, "all spells added in spellAdd script"
+	set active to 0
+	set state to 0
+endif
+
+End
+
+# vn_lichspellremove ==========================================================
+Begin vn_lichspellremove
+
+; when is this used???
+; --used by levelup script, since lichgood must be re-applied then. Must be used elsewhere though??
+; or else I'd have removed skills here, surely?
+; Well, since it's not broke I won't fix it. This is what happens when you don't touch a mod for 6 months...
+
+; does NOT remove skills???
+
+; removes abilities
+; removes attributes
+; removes bonuses
+; removes lich powers
+; removes avenue powers
+; MIGHT remove skills - only if mad leveller used
+
+short state
+short removelevel
+short temp
+short temp2
+short temp3
+
+if ( state == 0 )
+	
+	; check if mad leveller needs skills removed
+	if ( mlRemoved == 1 )
+		StartScript "vn_lichskillremove"
+	endif
+
+	Player->RemoveSpell "vn_lichgood0"
+	Player->RemoveSpell "vn_lichgood1"
+	Player->RemoveSpell "vn_lichgood2"
+	Player->RemoveSpell "vn_lichgood3"
+	Player->RemoveSpell "vn_lichgood4"
+	Player->RemoveSpell "vn_lichgood5"
+	Player->RemoveSpell "vn_lichgood6"
+	Player->RemoveSpell "vn_lichgood7"
+	Player->RemoveSpell "vn_lichgood8"
+	Player->RemoveSpell "vn_lichgood9"
+	Player->RemoveSpell "vn_lichgood10"
+	Player->RemoveSpell "vn_lichgood11"
+	Player->RemoveSpell "vn_lichgood12"
+
+	set state to 1
+endif
+
+if ( state == 1 )
+
+if ( Player->GetSpell "vn_bodysteal" == 1 )
+	Player->RemoveSpell "vn_bodysteal"
+endif
+
+if ( Player->GetSpell "vn_power_ritual_spell" == 1 )
+	Player->RemoveSpell "vn_power_ritual_spell"
+endif
+
+if ( Player->GetSpell "vn_raise_dead" == 1 )
+	Player->RemoveSpell "vn_raise_dead"
+endif
+
+if ( Player->GetSpell "vn_follower_teleport" == 1 )
+	Player->RemoveSpell "vn_follower_teleport"
+endif
+
+if ( Player->GetSpell "vn_lich_spellmaking" == 1 )
+	Player->RemoveSpell "vn_lich_spellmaking"
+endif
+
+if ( Player->GetSpell "vn_lich_enchanting" == 1 )
+	Player->RemoveSpell "vn_lich_enchanting"
+endif
+
+if ( Player->GetSpell "vn_set_waypoint" == 1 )
+	Player->RemoveSpell "vn_set_waypoint"
+endif
+
+Player->RemoveSpell "vn_lich_transform"
+Player->RemoveSpell "vn_lich_transform_back"
+Player->RemoveSpell "vn_lichcurse"
+
+set state to 2 
+endif
+
+if ( state == 2 )
+
+	if ( vn_lich_vamp == 1 ) ; Remove vampire attribute fortification as well for body steal check
+        if ( VampClan == 1 ) ; Vampire hunger moves the attribute fortification for vampire clans into it's own spell and leaves the original with only skill buffs
+			if ( Player->GetSpell "VH_Special_Aundae" == 1 )
+				Player->RemoveSpell "VH_Special_Aundae"
+			endif
+		endif
+		if ( VampClan == 2 )
+			if ( Player->GetSpell "VH_Special_Berne" == 1 )
+				Player->RemoveSpell "VH_Special_Berne"
+			endif
+		endif
+		if ( VampClan == 3 )
+			if ( Player->GetSpell "VH_Spell_Quarra" == 1 )
+				Player->RemoveSpell "VH_Spell_Quarra"
+			endif
+		endif
+        set VH_PlayerHasVampireBonus to 0 ; Remove temp buffs from drinking vampire blood in Vampire Hunger
+        if ( Player->GetSpell "VH_Bonus_Agility_20" == 1 )
+            Player->RemoveSpell "VH_Bonus_Agility_20"
+        endif
+        if ( Player->GetSpell "VH_Bonus_Endurance_20" == 1 )
+            Player->RemoveSpell "VH_Bonus_Endurance_20"
+        endif
+        if ( Player->GetSpell "VH_Bonus_Intelligence_20" == 1 )
+            Player->RemoveSpell "VH_Bonus_Intelligence_20"
+        endif
+        if ( Player->GetSpell "VH_Bonus_Luck_20" == 1 )
+            Player->RemoveSpell "VH_Bonus_Luck_20"
+        endif
+        if ( Player->GetSpell "VH_Bonus_Personality_20" == 1 )
+            Player->RemoveSpell "VH_Bonus_Personality_20"
+        endif
+        if ( Player->GetSpell "VH_Bonus_Speed_20" == 1 )
+            Player->RemoveSpell "VH_Bonus_Speed_20"
+        endif
+        if ( Player->GetSpell "VH_Bonus_Strength_20" == 1 )
+            Player->RemoveSpell "VH_Bonus_Strength_20"
+        endif
+        if ( Player->GetSpell "VH_Bonus_Willpower_20" == 1 )
+            Player->RemoveSpell "VH_Bonus_Willpower_20"
+        endif
+        if ( Player->GetSpell "vampire attributes" == 1 )
+            Player->RemoveSpell "vampire attributes"
+        endif
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev1" == 1 )
+		Player->RemoveSpell "vn_lichattrlev1"
+		set removelevel to 1
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev5" == 1 )
+		Player->RemoveSpell "vn_lichattrlev5"
+		set removelevel to 2
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev10" == 1 )
+		Player->RemoveSpell "vn_lichattrlev10"
+		set removelevel to 3
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev15" == 1 )
+		Player->RemoveSpell "vn_lichattrlev15"
+		set removelevel to 4
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev20" == 1 )
+		Player->RemoveSpell "vn_lichattrlev20"
+		set removelevel to 5
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev25" == 1 )
+		Player->RemoveSpell "vn_lichattrlev25"
+		set removelevel to 6
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev30" == 1 )
+		Player->RemoveSpell "vn_lichattrlev30"
+		set removelevel to 7
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev35" == 1 )
+		Player->RemoveSpell "vn_lichattrlev35"
+		set removelevel to 8
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev40" == 1 )
+		Player->RemoveSpell "vn_lichattrlev40"
+		set removelevel to 9
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev45" == 1 )
+		Player->RemoveSpell "vn_lichattrlev45"
+		set removelevel to 10
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev50" == 1 )
+		Player->RemoveSpell "vn_lichattrlev50"
+		set removelevel to 11
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev55" == 1 )
+		Player->RemoveSpell "vn_lichattrlev55"
+		set removelevel to 12
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev60" == 1 )
+		Player->RemoveSpell "vn_lichattrlev60"
+		set removelevel to 13
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev65" == 1 )
+		Player->RemoveSpell "vn_lichattrlev65"
+		set removelevel to 14
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev70" == 1 )
+		Player->RemoveSpell "vn_lichattrlev70"
+		set removelevel to 15
+	endif
+
+	if ( Player->GetSpell "vn_lichattrlev75" == 1 )
+		Player->RemoveSpell "vn_lichattrlev75"
+		set removelevel to 16
+	endif
+
+	set state to 3
+
+endif
+
+if ( state == 3 )
+
+	Player->RemoveSpell "vn_Lichbonuslev1"
+	Player->RemoveSpell "vn_Lichbonuslev5"
+	Player->RemoveSpell "vn_Lichbonuslev10"
+	Player->RemoveSpell "vn_Lichbonuslev15"
+	Player->RemoveSpell "vn_Lichbonuslev20"
+	Player->RemoveSpell "vn_Lichbonuslev25"
+	Player->RemoveSpell "vn_Lichbonuslev30"
+	Player->RemoveSpell "vn_Lichbonuslev35"
+	Player->RemoveSpell "vn_Lichbonuslev40"
+	Player->RemoveSpell "vn_Lichbonuslev45"
+	Player->RemoveSpell "vn_Lichbonuslev50"
+	Player->RemoveSpell "vn_Lichbonuslev55"
+	Player->RemoveSpell "vn_Lichbonuslev60"
+	Player->RemoveSpell "vn_Lichbonuslev65"
+	Player->RemoveSpell "vn_Lichbonuslev70"
+	Player->RemoveSpell "vn_Lichbonuslev75"
+
+	set state to 4
+
+endif
+
+if ( state == 4 )
+
+	if ( Player->GetSpell "vn_pn_fake_death" == 1 )
+		Player->RemoveSpell "vn_pn_fake_death"
+	endif
+
+	if ( Player->GetSpell "vn_pn_heal_undead_horde" == 1 )
+		Player->RemoveSpell "vn_pn_heal_undead_horde"
+	endif
+
+	if ( Player->GetSpell "vn_pn_turn_undead" == 1 )
+		Player->RemoveSpell "vn_pn_turn_undead"
+	endif
+
+	if ( Player->GetSpell "vn_pn_reanimate" == 1 )
+		Player->RemoveSpell "vn_pn_reanimate"
+	endif
+
+	if ( Player->GetSpell "vn_pn_dissolve_flesh" == 1 )
+		Player->RemoveSpell "vn_pn_dissolve_flesh"
+	endif
+
+	if ( Player->GetSpell "vn_pn_raise_dead" == 1 )
+		Player->RemoveSpell "vn_pn_raise_dead"
+	endif
+
+	if ( Player->GetSpell "vn_pn_regeneration" == 1 )
+		Player->RemoveSpell "vn_pn_regeneration"
+	endif
+
+	if ( Player->GetSpell "vn_pn_undead_legion" == 1 )
+		Player->RemoveSpell "vn_pn_undead_legion"
+	endif
+
+	if ( Player->GetSpell "vn_pn_unholy_animation" == 1 )
+		Player->RemoveSpell "vn_pn_unholy_animation"
+	endif
+
+	set state to 5
+
+endif
+
+if ( state == 5 )
+
+	if ( Player->GetSpell "vn_ps_explosive_rat" == 1 )
+		Player->RemoveSpell "vn_ps_explosive_rat"
+	endif
+
+	if ( Player->GetSpell "vn_ps_detect" == 1 )
+		Player->RemoveSpell "vn_ps_detect"
+	endif
+
+	if ( Player->GetSpell "vn_ps_resist_weapons" == 1 )
+		Player->RemoveSpell "vn_ps_resist_weapons"
+	endif
+
+	if ( Player->GetSpell "vn_ps_magicka_boon" == 1 )
+		Player->RemoveSpell "vn_ps_magicka_boon"
+	endif
+
+	if ( Player->GetSpell "vn_ps_consume_soul" == 1 )
+		Player->RemoveSpell "vn_ps_consume_soul"
+	endif
+
+	if ( Player->GetSpell "vn_ps_godmode" == 1 )
+		Player->RemoveSpell "vn_ps_godmode"
+	endif
+
+	if ( Player->GetSpell "vn_ps_petrify" == 1 )
+		Player->RemoveSpell "vn_ps_petrify"
+	endif
+
+	if ( Player->GetSpell "vn_ps_chicken" == 1 )
+		Player->RemoveSpell "vn_ps_chicken"
+	endif
+
+	set state to 6
+
+endif
+
+if ( state == 6 )
+
+	if ( Player->GetSpell "vn_pp_peace" == 1 )
+		Player->RemoveSpell "vn_pp_peace"
+	endif
+
+	if ( Player->GetSpell "vn_pp_beast_detect" == 1 )
+		Player->RemoveSpell "vn_pp_beast_detect"
+	endif
+
+	if ( Player->GetSpell "vn_pp_reduce_notoriety" == 1 )
+		Player->RemoveSpell "vn_pp_reduce_notoriety"
+	endif
+
+	if ( Player->GetSpell "vn_pp_packrat" == 1 )
+		Player->RemoveSpell "vn_pp_packrat"
+	endif
+
+	if ( Player->GetSpell "vn_pp_beast_mastery" == 1 )
+		Player->RemoveSpell "vn_pp_beast_mastery"
+	endif
+
+	if ( Player->GetSpell "vn_pp_voice" == 1 )
+		Player->RemoveSpell "vn_pp_voice"
+	endif
+
+	if ( Player->GetSpell "vn_pp_terror" == 1 )
+		Player->RemoveSpell "vn_pp_terror"
+	endif
+
+	if ( Player->GetSpell "vn_pp_fame" == 1 )
+		Player->RemoveSpell "vn_pp_fame"
+	endif
+
+	if ( Player->GetSpell "vn_pp_command" == 1 )
+		Player->RemoveSpell "vn_pp_command"
+	endif
+
+	set state to 7
+
+endif
+
+if ( state == 7 )
+
+	if ( Player->GetSpell "vn_pv_bloodrage" == 1 )
+		Player->RemoveSpell "vn_pv_bloodrage"
+	endif
+
+	if ( Player->GetSpell "vn_pv_absorbmagicka" == 1 )
+		Player->RemoveSpell "vn_pv_absorbmagicka"
+	endif
+
+	if ( Player->GetSpell "vn_pv_vampbite" == 1 )
+		Player->RemoveSpell "vn_pv_vampbite"
+	endif
+
+	if ( Player->GetSpell "vn_pv_consume" == 1 )
+		Player->RemoveSpell "vn_pv_consume"
+	endif
+
+	if ( Player->GetSpell "vn_pv_brainwash" == 1 )
+		Player->RemoveSpell "vn_pv_brainwash"
+	endif
+
+	if ( Player->GetSpell "vn_pv_frenzy" == 1 )
+		Player->RemoveSpell "vn_pv_frenzy"
+	endif
+
+	if ( Player->GetSpell "vn_pv_stealskills" == 1 )
+		Player->RemoveSpell "vn_pv_stealskills"
+	endif
+
+	if ( Player->GetSpell "vn_pv_superspeed_ON" == 1 )
+		Player->RemoveSpell "vn_pv_superspeed_ON"
+	endif
+
+	if ( Player->GetSpell "vn_pv_superspeed_OFF" == 1 )
+		Player->RemoveSpell "vn_pv_superspeed_OFF"
+	endif
+
+	set state to 8
+
+endif
+
+if ( state == 8 )
+
+	if ( removelevel == 1 )
+		set temp to 1
+		set temp2 to 1
+		set temp3 to 1
+	else
+		set removelevel to ( removelevel - 1 )
+		set temp to ( removelevel * 4 )
+		set temp2 to ( removelevel * 5 )
+		set temp3 to ( removelevel * 6 )
+	endif
+
+	if ( removelevel > 0 )
+		set Gals_Natural_Willpower to ( Gals_Natural_Willpower - temp2 )
+		set Gals_Natural_Intelligence to ( Gals_Natural_Intelligence - temp2 )
+	endif
+
+	set state to 9
+
+endif
+
+if ( state == 9 )
+	set vn_spellremove_done to 1
+	set state to 0
+	StopScript "vn_lichspellremove"
+endif
+
+End
+

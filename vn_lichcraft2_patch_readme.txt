@@ -2,7 +2,7 @@
      The Elder Scrolls III
           MORROWIND:
       Lichcraft2 Patch
-            V 1.00
+            V 2.00
 	by Madgamer98
 *****************************************************************
 Contents:
@@ -14,16 +14,19 @@ Contents:
      1. INSTALLING THE PLUGIN
 *****************************************************************
 
-To install the patch, unzip the esp into the Morrowind/Data Files directory
-overwriting the vn_lichcraft2.esp.
+To install the patch, unzip the .esp into the Morrowind/Data Files directory
+overwriting vn_lichcraft2.esp and vn_lichcraft2_alt.esp.
 
 This mod requires both Tribunal and Bloodmoon to be installed.
 It also requires the base lichcraft 2 mod files.
 
-There are 2 .esp included with this plugin.
+There are 3 .esp included with this plugin.
 
 vn_lichcraft2.esp - default. When you become a Lich, you lose the ability to use certain clothing slots 
 vn_lichcraft2_alt.esp - Alternative. When you become a Lich you may use any equipment slot, but your original appearance is forever lost.
+
+vn_lichcraft2_VH_Patch.esp - Compatability Patch for Vampire Hunger to handle Attribute Fortification refresh when possessing a host.
+Can be used with the default or alt lichcraft 2 esp
 
 *****************************************************************
      2. Patch Changelog
