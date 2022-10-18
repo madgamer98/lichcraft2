@@ -1,4 +1,4 @@
-# The Elder Scrolls III MORROWIND: Lichcraft 2 Patch V 2.00
+# The Elder Scrolls III MORROWIND: Lichcraft 2 Patch V2.00
 
 ## Table of Contents:
 1. [Description](/README.md#description)
