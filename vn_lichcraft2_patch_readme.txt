@@ -1,21 +1,22 @@
 *****************************************************************
      The Elder Scrolls III
           MORROWIND:
-      Lichcraft2 Patch
-            V 2.00
-	by Madgamer98
+      Lichcraft 2 Patch
+           V 2.00
+        by Madgamer98
 *****************************************************************
 Contents:
 1. Installation
 2. Patch Changelog
 3. Additional Patch Credits
+4. Original Readme
 
 *****************************************************************
      1. INSTALLING THE PLUGIN
 *****************************************************************
 
 This mod requires both Tribunal and Bloodmoon to be installed.
-It also requires the base lichcraft 2 mod files.
+It also requires the base Lichcraft 2 mod files.
 
 To install the patch, unzip the .esp into the Morrowind/Data Files directory
 overwriting vn_lichcraft2.esp and vn_lichcraft2_alt.esp.
@@ -29,7 +30,7 @@ vn_lichcraft2.esp - default. When you become a Lich, you lose the ability to use
 vn_lichcraft2_alt.esp - Alternative. When you become a Lich you may use any equipment slot, but your original appearance is forever lost.
 
 vn_lichcraft2_VH_Patch.esp - Compatability Patch for Vampire Hunger to handle Attribute Fortification refresh when possessing a host.
-Can be used with the default or alt lichcraft 2 esp. Only activate if you have Vampire Hunger Activated
+Can be used with the default or alt Lichcraft 2 esp. Only activate if you have Vampire Hunger Activated
 
 *****************************************************************
      2. Patch Changelog
@@ -37,25 +38,25 @@ Can be used with the default or alt lichcraft 2 esp. Only activate if you have V
 
 Public Repository for current patch: https://github.com/madgamer98/lichcraft2
 
-18 October 2022 Madgamer98 Lichcraft2 Patch 2.0:
-     -- Fixed Spellmaker spell errors causing a fatal error and not allowing you to create spells.
-     -- Fixed Detection Timer to correctly trigger once every 5 seconds. It was never resetting so past the first 5 seconds it would check each frame.
-     -- Fixed Vampire Liches not losing blood points when their body dies and they are sent back to the phylactery.
-     -- Fixed Power Rituals never resetting once you have unlocked the ability to do one. Now they correctly wait for you to increase your level to unlock again.
-     -- Power Rituals now queue up so you can't miss them by leveling too fast. When completely a ritual the next one will be ready for the next full moon.
-     -- It now displays the next level required for a Power Ritual when you finish one
-     -- Fixed Blood conversion spell draining blood when in menus and paused.
-     -- Fixed Drain spells not feeding your blood points when the victim dies during its effect.
-     -- Drain spells now stop the feeding script from ending early until they expire. Allowing longer drain spells to still feed blood points.
-     -- Fixed Voice Dialogue issues for scripts that was preventing other mods from working with their Voice Dialogue Scripts. example: Vampire Embrace
-     -- Fixed Voice Dialogue scripts trying to run when a menu was open. Caused fatal errors to appear if you console killed someone (sethealth 0)
-     -- Cleaned esps with tes3cmd
-     -- Fixed Possession not working with inate Attribute Fortifications for Lich and Vampires. Meaning Possession still works with them on and won't be blocked.
+18 October 2022 Madgamer98 Lichcraft 2 Patch 2.0:
+     - Fixed Spellmaker spell errors causing a fatal error and not allowing you to create spells.
+     - Fixed Detection Timer to correctly trigger once every 5 seconds. It was never resetting so past the first 5 seconds it would check each frame.
+     - Fixed Vampire Liches not losing blood points when their body dies and they are sent back to the phylactery.
+     - Fixed Power Rituals never resetting once you have unlocked the ability to do one. Now they correctly wait for you to increase your level to unlock again.
+     - Power Rituals now queue up so you can't miss them by leveling too fast. When completely a ritual the next one will be ready for the next full moon.
+     - It now displays the next level required for a Power Ritual when you finish one
+     - Fixed Blood conversion spell draining blood when in menus and paused.
+     - Fixed Drain spells not feeding your blood points when the victim dies during its effect.
+     - Drain spells now stop the feeding script from ending early until they expire. Allowing longer drain spells to still feed blood points.
+     - Fixed Voice Dialogue issues for scripts that was preventing other mods from working with their Voice Dialogue Scripts. example: Vampire Embrace
+     - Fixed Voice Dialogue scripts trying to run when a menu was open. Caused fatal errors to appear if you console killed someone (sethealth 0)
+     - Cleaned esps with tes3cmd
+     - Fixed Possession not working with inate Attribute Fortifications for Lich and Vampires. Meaning Possession still works with them on and won't be blocked.
         Additional Attribute Fortifications will still block Possession. We essentially remove those inate Fortification effects and check again.
         They are then readded after possession attempt is done.
-     -- Added Vampire Hunger Compatability Patch. Handles VH Attribute Fortifications for Possession.
-     -- Readded back the alt esp that lets you use a lich race and have full equipment slots. All fixes above are included.
-     -- Public Repository for patch: https://github.com/madgamer98/lichcraft2
+     - Added Vampire Hunger Compatability Patch. Handles VH Attribute Fortifications for Possession.
+     - Readded back the alt esp that lets you use a lich race and have full equipment slots. All fixes above are included.
+     - Public Repository for patch created: https://github.com/madgamer98/lichcraft2
      
 30 November 2021 Madgamer98 Lichcraft2 Patch 1.0:
      1. Opened and saved/Recompiled all mod scripts which fixed the ritual breaking with potions not being drank.
@@ -108,19 +109,22 @@ Public Repository for current patch: https://github.com/madgamer98/lichcraft2
 
 Madgamer98 (https://github.com/madgamer98)
      That's me!
-     This Lichcraft2 patch that fixes additional issues that still persist. Built off of Claviticus' patch
+     This Lichcraft 2 patch that fixes additional issues that still persist. Built off of Claviticus' patch
      Additonal Vampire Hunger Compatability Patch for possession
 
 
 Claviticus
-     Lichcraft2 Patch Beta 2.7
-     Put together a patch fix for lichcraft2
+     Lichcraft 2 Patch Beta 2.7
+     Put together a patch fix for Lichcraft 2
      03 August 2011 - Claviticus published Patch Beta
      06 August 2011 - abot provided improved scripts though untested ingame
      08 August 2011 - Claviticus published Patch Beta 2, but it's unclear whether abot's scripts have been implemented or not
 
 
-Original Readme Below:
+*****************************************************************
+     4. Additional Patch Credits
+*****************************************************************
+
 *****************************************************************
      The Elder Scrolls III
           MORROWIND:
@@ -153,7 +157,7 @@ To install the plug-in, unzip the files into the Morrowind/Data Files directory.
 This mod requires both Tribunal and Bloodmoon to be installed.
 
 NOTE: If you are also running the Mad Leveller, make sure it is loaded AFTER LichCraft. Additionally, DO NOT use
- the Mad Leveller LichCraft fix. It is no longer compatible, or necessary.
+the Mad Leveller LichCraft fix. It is no longer compatible, or necessary.
 
 There are two .esp's included with this plugin.
 
