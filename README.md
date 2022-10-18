@@ -49,6 +49,9 @@ Claviticus
 - 03 August 2011 - Claviticus published Patch Beta  
 - 06 August 2011 - abot provided improved scripts though untested ingame  
 - 08 August 2011 - Claviticus published Patch Beta 2, but it's unclear whether abot's scripts have been implemented or not  
+
+IKilledTheDevil  
+Who uploaded the mod to the nexus for ease of access once the orignal page went down
      
 <hr />
 
