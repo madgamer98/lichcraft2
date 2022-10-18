@@ -1,0 +1,161 @@
+*****************************************************************
+     1. Additional Patch Credits
+*****************************************************************
+
+Madgamer98 (https://github.com/madgamer98)
+     That's me!
+     This Lichcraft 2 patch that fixes additional issues that still persist. Built off of Claviticus' patch
+     Additonal Vampire Hunger Compatability Patch for possession
+
+
+Claviticus
+     Lichcraft 2 Patch Beta 2.7
+     Put together a patch fix for Lichcraft 2
+     03 August 2011 - Claviticus published Patch Beta
+     06 August 2011 - abot provided improved scripts though untested ingame
+     08 August 2011 - Claviticus published Patch Beta 2, but it's unclear whether abot's scripts have been implemented or not
+
+*****************************************************************
+     2. Original Credits
+*****************************************************************
+
+TheLys
+- wrote the original Lich script, an invaluable starting point for this mod
+
+Charles J. Devito (rhe1@gte.net) / LDones (ldones@hiredgoons.net)
+- for the original Lich ideas taken from Illuminated Order. As well as many of their scripts that have been 
+borrowed to some extent.
+
+GhanBuriGhan
+- for Morrowind Scripting for Dummies. I couldn't have coded a tenth of the script in this mod if I hadn't had
+this as a reference. (Or perhaps I could, but it'd have taken ten times longer)
+
+TheOneWriath
+- for all the lore on Liches, without which this mod wouldn't be what it is. And likely wouldn't have even gotten off the ground.
+
+Cj Campbell
+- for originally hosting the mod on www.brimd.com/lichcraft
+
+Cortex
+- some of my key scripting concepts were inspired by the techniques used in VE.
+
+
+tsbasilisk, reffa, and everyone wlso who is/was involved in testing or brainstorming on this mod.
+You know who you are!
+
+
+
+ --- RESOURCES: ---
+
+ --- Modders who've created resources especially for this mod: ---
+
+Luminar Nightblade 
+- Lich skeleton texture & most things in the new Phylactery interior (including the phylactery itself).
+
+[Someone who's name I cant seem to find. Sorry!]
+- Visionary globe, plus moon phase predicting device.
+
+Veryade Athan
+- Lich Lair, plus various other bits and pieces.
+ 
+
+ --- Other modders whose work I've used: ---
+
+MarcusX
+- Skeleton crown models
+
+Igor Pavlov
+- Gothic Gear (some skeleton weapons and capes)
+
+HopperFly621 & Calishan
+- physiqued capes
+
+Michael 'HelioS' Bennett
+- various weapons from assassins armory (plus a robe)
+
+Carnithus (http://www.angelfire.com/empire2/innercrypt/)
+- various armors from the Armamentarium
+
+Someone else who's name I can't find!
+- Onyxwood staff teaser
+
+Dark Baron
+- Skeleton mage robe (red)
+
+MP*Canus
+- Telvanni mage robe worn by undead sorcerers
+
+Joel Braddock (a.k.a. Mantodea)
+- Daedric Priest robe, used by a certain undead follower.
+
+ModMan
+- Spirit Stone mesh/texture from the infamous gempack
+
+Slategrey
+- for the Lightblue kai globe model which I've 'borrowed'.
+
+Cait
+- For the chicken model
+
+
+Okay, I think that's all :)
+
+
+*****************************************************************
+     6. Contact
+*****************************************************************
+
+To contact me for whatever reason (suggestions, bugs, etc) email:
+
+adesignforlife@gmail.com
+
+or message me ('VenomByte') on the ES forums.
+
+
+*****************************************************************
+     7. FAQ/Other notes
+*****************************************************************
+
+F.A.Q
+
+1) Can a Vampire become a Lich?
+Yes, you can. You follow the same process but with a different potion. As a Vampiric-Lich you cannot use normal
+restore health or magicka effects, but there are new ways to gain them...
+
+2) Can I be cured of Lichdom?
+No. The process is completely irreversable.
+
+3) Why can't I pick up the book on Necromancy?
+That bug has been fixed. You can now.
+
+4) Where can I find Adamantium Ore?
+For this, and various other 'How do I' and 'Where is' questions, check the spoiler skull in the census and
+excised office in seyda neen
+
+5) Do I take on someone's appearance when I possess them?
+No. You remain a skeleton, and your disguised form remains as before. Effectively, you take on only thier physical
+attributes - strength, speed, agility, and endurance.
+
+6) Can I enter the Phylactery in any way other than almost dying?
+Remember, the phylactery is a 'net' to catch your soul. It's not a retreat you can hop off to when you feel like it.
+Previously, the answer to this questions was 'no'. But now there is a way. There is a unique spell in the Avenue
+of Necromancy which allows you to fake your own death. If you're lucky, you might recieve this from a power ritual.
+
+7) So hang on... what exactly IS a phylactery then?
+When someone becomes a lich, their body dies, and their soul is transferred to a magical container. This container
+is the phylactery. It houses the soul of the lich. The Lich may then animate its corpse, and go about its business
+as if it were alive (well, as much as a corpse can). Should the Lich be 'killed', it's soul does not pass on to the
+ next world, but instead returns to the phylactery, where it can reanimate its body and return to the world. 
+A Lich is destroyed if it's phylactery is ever broken, wherever the Lich's animated corpse might be at the time.
+
+8) What's the difference between your lich and the type you can come via Illuminated Order?
+Far too many to list.
+
+10) Will there be an Oblivion LichCraft?
+Yes. If i turn out to get addicted to Oblivion too.
+
+
+Other Notes:
+
+*SEMI SPOILER*
+See the Lich Crown? There's rather more to it than meets the eye.
