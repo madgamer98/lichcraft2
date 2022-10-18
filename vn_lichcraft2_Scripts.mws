@@ -456,7 +456,8 @@ if ( state == 10 )
 		set state to 0
 		set endtimer to 0
 		StopScript "vn_body_steal_script"
-	endif		
+	endif
+	return
 endif
 
 if ( GetSpellEffects "vn_pv_stealskills" == 1 )
@@ -597,6 +598,7 @@ endif
 if ( GetEffect sEffectAbsorbHealth == 1 )
 	if ( feedflag == 0 )
 		set prehealth to GetHealth
+;		MessageBox "Vn Feeding Pre Health %G" prehealth
 		set feedflag to 1
 	endif
 endif
@@ -628,11 +630,6 @@ if ( feedmagickaflag == 1 )
 endif
 
 set timer to ( timer + ( GetSecondsPassed ) )
-set t2 to ( t2 + ( GetSecondsPassed ) )
-
-if ( t2 > 2 )
-	set t2 to 0
-endif
 
 if ( GetSpellEffects "vn_ps_chicken" == 1 )
 	if ( rat == 0 )
@@ -648,9 +645,11 @@ endif
 
 if ( timer > 60 )
 	if ( steal == 0 )
-		SetAlarm alarm
-		set state to 10
-		return
+		if ( feedflag == 0 )
+			SetAlarm alarm
+			set state to 10
+			return
+		endif
 	endif
 endif
 
@@ -706,6 +705,15 @@ if ( GetHealth <= 1 )
 	else
 		set state to 10
 	endif
+	if ( feedflag == 1 )
+		set feedflag to 0
+		set afterhealth to GetHealth
+		set vn_feeding to ( prehealth - afterhealth )
+;		MessageBox "Vn Feeding Pre Health %G" prehealth
+;		MessageBox "Vn Feeding After Health %G" afterhealth
+;		MessageBox "Vn Feeding Health %G" vn_feeding
+	endif
+endif
 	; SetHealth -1000
 endif
 
@@ -717,7 +725,7 @@ endif
 
 End
 
-# vn_body_steal_script2 =======================================================
+# vn_body_steal_script2 ========================================================
 Begin vn_body_steal_script2
 
 short steal
@@ -755,7 +763,7 @@ if ( CellChanged )
 endif
 
 if ( doonce == 0 )
-	set vn_bodyscript2_flag to 0
+	set vn_bodyscript2_flag to 1
 ;	MessageBox "Testing Body Script 2"
 	set alarm to GetAlarm
 	SetAlarm -5
@@ -782,7 +790,8 @@ if ( state == 10 )
 		set state to 0
 		set endtimer to 0
 		StopScript "vn_body_steal_script2"
-	endif		
+	endif
+	return
 endif
 
 if ( GetSpellEffects "vn_pv_stealskills" == 1 )
@@ -923,6 +932,7 @@ endif
 if ( GetEffect sEffectAbsorbHealth == 1 )
 	if ( feedflag == 0 )
 		set prehealth to GetHealth
+;		MessageBox "Vn Feeding Pre Health %G" prehealth
 		set feedflag to 1
 	endif
 endif
@@ -954,11 +964,6 @@ if ( feedmagickaflag == 1 )
 endif
 
 set timer to ( timer + ( GetSecondsPassed ) )
-set t2 to ( t2 + ( GetSecondsPassed ) )
-
-if ( t2 > 2 )
-	set t2 to 0
-endif
 
 if ( GetSpellEffects "vn_ps_chicken" == 1 )
 	if ( rat == 0 )
@@ -974,9 +979,11 @@ endif
 
 if ( timer > 60 )
 	if ( steal == 0 )
-		SetAlarm alarm
-		set state to 10
-		return
+		if ( feedflag == 0 )
+			SetAlarm alarm
+			set state to 10
+			return
+		endif
 	endif
 endif
 
@@ -1032,6 +1039,15 @@ if ( GetHealth <= 1 )
 	else
 		set state to 10
 	endif
+	if ( feedflag == 1 )
+		set feedflag to 0
+		set afterhealth to GetHealth
+		set vn_feeding to ( prehealth - afterhealth )
+;		MessageBox "Vn Feeding Pre Health %G" prehealth
+;		MessageBox "Vn Feeding After Health %G" afterhealth
+;		MessageBox "Vn Feeding Health %G" vn_feeding
+	endif
+endif
 	; SetHealth -1000
 endif
 
@@ -1043,7 +1059,7 @@ endif
 
 End
 
-# vn_body_steal_script3 =======================================================
+# vn_body_steal_script3 ========================================================
 Begin vn_body_steal_script3
 
 short steal
@@ -1081,7 +1097,7 @@ if ( CellChanged )
 endif
 
 if ( doonce == 0 )
-	set vn_bodyscript3_flag to 0
+	set vn_bodyscript3_flag to 1
 ;	MessageBox "Testing Body Script 3"
 	set alarm to GetAlarm
 	SetAlarm -5
@@ -1108,7 +1124,8 @@ if ( state == 10 )
 		set state to 0
 		set endtimer to 0
 		StopScript "vn_body_steal_script3"
-	endif		
+	endif
+	return
 endif
 
 if ( GetSpellEffects "vn_pv_stealskills" == 1 )
@@ -1249,6 +1266,7 @@ endif
 if ( GetEffect sEffectAbsorbHealth == 1 )
 	if ( feedflag == 0 )
 		set prehealth to GetHealth
+;		MessageBox "Vn Feeding Pre Health %G" prehealth
 		set feedflag to 1
 	endif
 endif
@@ -1280,11 +1298,6 @@ if ( feedmagickaflag == 1 )
 endif
 
 set timer to ( timer + ( GetSecondsPassed ) )
-set t2 to ( t2 + ( GetSecondsPassed ) )
-
-if ( t2 > 2 )
-	set t2 to 0
-endif
 
 if ( GetSpellEffects "vn_ps_chicken" == 1 )
 	if ( rat == 0 )
@@ -1300,9 +1313,11 @@ endif
 
 if ( timer > 60 )
 	if ( steal == 0 )
-		SetAlarm alarm
-		set state to 10
-		return
+		if ( feedflag == 0 )
+			SetAlarm alarm
+			set state to 10
+			return
+		endif
 	endif
 endif
 
@@ -1358,6 +1373,15 @@ if ( GetHealth <= 1 )
 	else
 		set state to 10
 	endif
+	if ( feedflag == 1 )
+		set feedflag to 0
+		set afterhealth to GetHealth
+		set vn_feeding to ( prehealth - afterhealth )
+;		MessageBox "Vn Feeding Pre Health %G" prehealth
+;		MessageBox "Vn Feeding After Health %G" afterhealth
+;		MessageBox "Vn Feeding Health %G" vn_feeding
+	endif
+endif
 	; SetHealth -1000
 endif
 
@@ -1369,7 +1393,7 @@ endif
 
 End
 
-# vn_body_steal_script4 =======================================================
+# vn_body_steal_script4 ========================================================
 Begin vn_body_steal_script4
 
 short steal
@@ -1434,7 +1458,8 @@ if ( state == 10 )
 		set state to 0
 		set endtimer to 0
 		StopScript "vn_body_steal_script4"
-	endif		
+	endif
+	return
 endif
 
 if ( GetSpellEffects "vn_pv_stealskills" == 1 )
@@ -1575,6 +1600,7 @@ endif
 if ( GetEffect sEffectAbsorbHealth == 1 )
 	if ( feedflag == 0 )
 		set prehealth to GetHealth
+;		MessageBox "Vn Feeding Pre Health %G" prehealth
 		set feedflag to 1
 	endif
 endif
@@ -1606,11 +1632,6 @@ if ( feedmagickaflag == 1 )
 endif
 
 set timer to ( timer + ( GetSecondsPassed ) )
-set t2 to ( t2 + ( GetSecondsPassed ) )
-
-if ( t2 > 2 )
-	set t2 to 0
-endif
 
 if ( GetSpellEffects "vn_ps_chicken" == 1 )
 	if ( rat == 0 )
@@ -1626,9 +1647,11 @@ endif
 
 if ( timer > 60 )
 	if ( steal == 0 )
-		SetAlarm alarm
-		set state to 10
-		return
+		if ( feedflag == 0 )
+			SetAlarm alarm
+			set state to 10
+			return
+		endif
 	endif
 endif
 
@@ -1684,6 +1707,15 @@ if ( GetHealth <= 1 )
 	else
 		set state to 10
 	endif
+	if ( feedflag == 1 )
+		set feedflag to 0
+		set afterhealth to GetHealth
+		set vn_feeding to ( prehealth - afterhealth )
+;		MessageBox "Vn Feeding Pre Health %G" prehealth
+;		MessageBox "Vn Feeding After Health %G" afterhealth
+;		MessageBox "Vn Feeding Health %G" vn_feeding
+	endif
+endif
 	; SetHealth -1000
 endif
 
@@ -1695,7 +1727,7 @@ endif
 
 End
 
-# vn_body_steal_script5 =======================================================
+# vn_body_steal_script5 ========================================================
 Begin vn_body_steal_script5
 
 short steal
@@ -1760,7 +1792,8 @@ if ( state == 10 )
 		set state to 0
 		set endtimer to 0
 		StopScript "vn_body_steal_script5"
-	endif		
+	endif
+	return
 endif
 
 if ( GetSpellEffects "vn_pv_stealskills" == 1 )
@@ -1901,6 +1934,7 @@ endif
 if ( GetEffect sEffectAbsorbHealth == 1 )
 	if ( feedflag == 0 )
 		set prehealth to GetHealth
+;		MessageBox "Vn Feeding Pre Health %G" prehealth
 		set feedflag to 1
 	endif
 endif
@@ -1932,11 +1966,6 @@ if ( feedmagickaflag == 1 )
 endif
 
 set timer to ( timer + ( GetSecondsPassed ) )
-set t2 to ( t2 + ( GetSecondsPassed ) )
-
-if ( t2 > 2 )
-	set t2 to 0
-endif
 
 if ( GetSpellEffects "vn_ps_chicken" == 1 )
 	if ( rat == 0 )
@@ -1952,9 +1981,11 @@ endif
 
 if ( timer > 60 )
 	if ( steal == 0 )
-		SetAlarm alarm
-		set state to 10
-		return
+		if ( feedflag == 0 )
+			SetAlarm alarm
+			set state to 10
+			return
+		endif
 	endif
 endif
 
@@ -2010,6 +2041,15 @@ if ( GetHealth <= 1 )
 	else
 		set state to 10
 	endif
+	if ( feedflag == 1 )
+		set feedflag to 0
+		set afterhealth to GetHealth
+		set vn_feeding to ( prehealth - afterhealth )
+;		MessageBox "Vn Feeding Pre Health %G" prehealth
+;		MessageBox "Vn Feeding After Health %G" afterhealth
+;		MessageBox "Vn Feeding Health %G" vn_feeding
+	endif
+endif
 	; SetHealth -1000
 endif
 
@@ -8121,21 +8161,23 @@ if ( bloodconversion == 2 )
 endif
 
 if ( Player->GetSpellEffects "vn_bloodconversion" == 1 )
-	; every 5 seconds, report blood points remaining
-	set conversion_timer to ( conversion_timer + ( GetSecondsPassed ) )
-	if ( conversion_timer > 5 )
-		set conversion_timer to 0
-		set vn_blood to ( vn_blood - 5 )
-		if ( vn_pv_blood_conv_bonus == 1 )
-			Player->ModCurrentMagicka 60
-		else
-			Player->ModCurrentMagicka 30
+	if ( MenuMode == 0 ); Only Drain Blood when outside a menu
+		; every 5 seconds, report blood points remaining
+		set conversion_timer to ( conversion_timer + ( GetSecondsPassed ) )
+		if ( conversion_timer > 5 )
+			set conversion_timer to 0
+			set vn_blood to ( vn_blood - 5 )
+			if ( vn_pv_blood_conv_bonus == 1 )
+				Player->ModCurrentMagicka 60
+			else
+				Player->ModCurrentMagicka 30
+			endif
+			if ( vn_blood <= 0 )
+				set vn_blood to 0
+				set bloodconversion to 1
+			endif
+			MessageBox "%.2f blood points remaining" vn_blood
 		endif
-		if ( vn_blood <= 0 )
-			set vn_blood to 0
-			set bloodconversion to 1
-		endif
-		MessageBox "%.2f blood points remaining" vn_blood
 	endif
 endif
 
