@@ -1,5 +1,7 @@
 # The Elder Scrolls III MORROWIND: Lichcraft 2 Patch V2.00
 
+# Download from the Nexus when possibly please!: (https://www.nexusmods.com/morrowind/mods/42945)
+
 ## Table of Contents:
 1. [Description](#description)
 2. [Installation](#installing-the-plugin)
@@ -52,6 +54,7 @@ Claviticus
 
 IKilledTheDevil  
 - Uploaded the mod to the nexus for ease of access once the orignal page went down. Saving the mod from being lost to time.
+- [Nexus Link](https://www.nexusmods.com/morrowind/mods/42945)
      
 <hr />
 
