@@ -14,11 +14,14 @@ Contents:
      1. INSTALLING THE PLUGIN
 *****************************************************************
 
+This mod requires both Tribunal and Bloodmoon to be installed.
+It also requires the base lichcraft 2 mod files.
+
 To install the patch, unzip the .esp into the Morrowind/Data Files directory
 overwriting vn_lichcraft2.esp and vn_lichcraft2_alt.esp.
 
-This mod requires both Tribunal and Bloodmoon to be installed.
-It also requires the base lichcraft 2 mod files.
+NOTE: If you are also running the Mad Leveller, make sure it is loaded AFTER LichCraft. Additionally, DO NOT use
+ the Mad Leveller LichCraft fix. It is no longer compatible, or necessary.
 
 There are 3 .esp included with this plugin.
 
@@ -26,12 +29,34 @@ vn_lichcraft2.esp - default. When you become a Lich, you lose the ability to use
 vn_lichcraft2_alt.esp - Alternative. When you become a Lich you may use any equipment slot, but your original appearance is forever lost.
 
 vn_lichcraft2_VH_Patch.esp - Compatability Patch for Vampire Hunger to handle Attribute Fortification refresh when possessing a host.
-Can be used with the default or alt lichcraft 2 esp
+Can be used with the default or alt lichcraft 2 esp. Only activate if you have Vampire Hunger Activated
 
 *****************************************************************
      2. Patch Changelog
 *****************************************************************
 
+Public Repository for current patch: https://github.com/madgamer98/lichcraft2
+
+18 October 2022 Madgamer98 Lichcraft2 Patch 2.0:
+     -- Fixed Spellmaker spell errors causing a fatal error and not allowing you to create spells.
+     -- Fixed Detection Timer to correctly trigger once every 5 seconds. It was never resetting so past the first 5 seconds it would check each frame.
+     -- Fixed Vampire Liches not losing blood points when their body dies and they are sent back to the phylactery.
+     -- Fixed Power Rituals never resetting once you have unlocked the ability to do one. Now they correctly wait for you to increase your level to unlock again.
+     -- Power Rituals now queue up so you can't miss them by leveling too fast. When completely a ritual the next one will be ready for the next full moon.
+     -- It now displays the next level required for a Power Ritual when you finish one
+     -- Fixed Blood conversion spell draining blood when in menus and paused.
+     -- Fixed Drain spells not feeding your blood points when the victim dies during its effect.
+     -- Drain spells now stop the feeding script from ending early until they expire. Allowing longer drain spells to still feed blood points.
+     -- Fixed Voice Dialogue issues for scripts that was preventing other mods from working with their Voice Dialogue Scripts. example: Vampire Embrace
+     -- Fixed Voice Dialogue scripts trying to run when a menu was open. Caused fatal errors to appear if you console killed someone (sethealth 0)
+     -- Cleaned esps with tes3cmd
+     -- Fixed Possession not working with inate Attribute Fortifications for Lich and Vampires. Meaning Possession still works with them on and won't be blocked.
+        Additional Attribute Fortifications will still block Possession. We essentially remove those inate Fortification effects and check again.
+        They are then readded after possession attempt is done.
+     -- Added Vampire Hunger Compatability Patch. Handles VH Attribute Fortifications for Possession.
+     -- Readded back the alt esp that lets you use a lich race and have full equipment slots. All fixes above are included.
+     -- Public Repository for patch: https://github.com/madgamer98/lichcraft2
+     
 30 November 2021 Madgamer98 Lichcraft2 Patch 1.0:
      1. Opened and saved/Recompiled all mod scripts which fixed the ritual breaking with potions not being drank.
 
@@ -46,29 +71,45 @@ Can be used with the default or alt lichcraft 2 esp
      I've gone ahead and re-saved all my scripts in my esp file just in case."
 
 08 August 2011 Claviticus Lichcraft2 Patch Beta 2:
-     Here is the next version, I finished cleaning all the scripts with my tool, and MWEdit. (They still need some manual formatting, but they should be free from syntax errors now. I also removed the reference to Book Rotate, sorry about that little slip up).
+     Here is the next version, I finished cleaning all the scripts with my tool, and MWEdit. (They still need some manual formatting,
+     but they should be free from syntax errors now. I also removed the reference to Book Rotate, sorry about that little slip up).
      As for the next update:
      1. I'm going to fix the disguise spell. (Right now it has some issues involving the lich crown, and crown of souls. It needs a few MenuMode checks, etc,.)
-     2. I'm probably going to go ahead and make separate bounties for each form. (I could probably do this without adding extra vars, but, it's just easier to track\swap if I do.)
+     2. I'm probably going to go ahead and make separate bounties for each form.
+          (I could probably do this without adding extra vars, but, it's just easier to track\swap if I do.)
      3. More script fixes. (Mainly finishing up the formatting.)
-     That's about all I have planned so far, I wanna look into the balance code, there were some pretty harsh penalties described in the scripts, but in-game I'm not really seeing them. (For example, ppl are supposed to really dislike me, even in human form, I think, but I have 100 disposition with most people I meet, despite low personality stats, etc,.So I'm just going to make sure everything is working as intended..)
+          That's about all I have planned so far, I wanna look into the balance code,
+          there were some pretty harsh penalties described in the scripts, but in-game I'm not really seeing them.
+          (For example, ppl are supposed to really dislike me, even in human form, I think, but I have 100 disposition with most people I meet,
+          despite low personality stats, etc,.So I'm just going to make sure everything is working as intended..)
 
 03 August 2011 Claviticus Lichcraft2 Patch Beta 1:
-     1. Tons of script errors involving the use of reserved keywords as local variables, ie, float random, long position, both of which are scripting commands, etc,. (I made too many misc fixes to list them all, but it was all minor stuff, like, if ( doonce = 0 ), was changed to the proper if ( doonce == 0 ), etc,.)
-     2. Crown of Souls: This was breaking for me, throwing expression errors, etc,. I fixed that, and a few issues with it's OnEquip code, it also had some issues with it's soul eating code, ie, ( RemoveSoulgem "soulgem_type" count ), count is invalid for this function, according to MWEdit anyways.
-     3. There may have been a bug that could cause you to miss levels of powers(ie, you get sorcery level 2, skipping level 1), I haven't really tested this out, but the code didn't look very reliable, so I updated it.. (Can't really call it a fix, since it may have been fine, but it's probably better now, at any rate.)
-     4. Fixed the "Reduce Notoriety" greater power, it reduces the bounty on your (disguised) human form, however, if cast it while in lich form, it basically wasted a days use and didn't apply the bounty reduction. Now it does, your human form bounty is properly reduced no matter what form you are in when you cast the spell. (I'm sure this is what the author intended, since the lich bounty is hardcoded to be at least 8,000, so reducing it would be kind of pointless since it can never go below the hardcoded limit.)
+     1. Tons of script errors involving the use of reserved keywords as local variables, ie, float random,long position, both of which are scripting commands, etc,.
+          (I made too many misc fixes to list them all, but it was all minor stuff, like, if ( doonce = 0 ), was changed to the proper if ( doonce == 0 ), etc,.)
+     2. Crown of Souls: This was breaking for me, throwing expression errors, etc,. I fixed that, and a few issues with it's OnEquip code,
+          it also had some issues with it's soul eating code, ie, ( RemoveSoulgem "soulgem_type" count ), count is invalid for this function, according to MWEdit anyways.
+     3. There may have been a bug that could cause you to miss levels of powers(ie, you get sorcery level 2, skipping level 1), I haven't really tested this out,
+          but the code didn't look very reliable, so I updated it.. (Can't really call it a fix, since it may have been fine, but it's probably better now, at any rate.)
+     4. Fixed the "Reduce Notoriety" greater power, it reduces the bounty on your (disguised) human form, however, if cast it while in lich form,
+          it basically wasted a days use and didn't apply the bounty reduction. Now it does,
+          your human form bounty is properly reduced no matter what form you are in when you cast the spell.
+          (I'm sure this is what the author intended, since the lich bounty is hardcoded to be at least 8,000,
+          so reducing it would be kind of pointless since it can never go below the hardcoded limit.)
      6. Removed lot's of debug messages. (ie, body check NULL, etc,.)
-     7. Made a few changes to the Lunar Chaneller, it seems to be working properly now. (Before it would sometimes say, you can do the power ritual on day 120, and then, when day 120 came around, it switched to day 140(or whatever), causing the ritual to fail on day 120(day 119 at 11pm technically, since you start the ritual one hour before midnight on the night of the full moon.. Yeah, it's confusing..)
+     7. Made a few changes to the Lunar Chaneller, it seems to be working properly now.
+          (Before it would sometimes say, you can do the power ritual on day 120, and then, when day 120 came around, it switched to day 140(or whatever),
+          causing the ritual to fail on day 120(day 119 at 11pm technically, since you start the ritual one hour before midnight on the night of the full moon..
+          Yeah, it's confusing..)
 
 
 *****************************************************************
      3. Additional Patch Credits
 *****************************************************************
 
-Madgamer98
+Madgamer98 (https://github.com/madgamer98)
      That's me!
-     This Lichcraft2 to fix additional issues that still persist. Built off of Claviticus' patch
+     This Lichcraft2 patch that fixes additional issues that still persist. Built off of Claviticus' patch
+     Additonal Vampire Hunger Compatability Patch for possession
 
 
 Claviticus
