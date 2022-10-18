@@ -8711,6 +8711,29 @@ if ( state == 22 )
 endif
 
 if ( state == 2 )
+
+	if ( vn_lich_vamp == 1 ) ; Readd vampire attribute bonuses
+		if ( VampClan == 1 )
+				if ( Player->GetSpell "vampire aundae specials" == 0 )
+					Player->AddSpell "vampire aundae specials"
+				endif
+			endif
+			if ( VampClan == 2 )
+				if ( Player->GetSpell "vampire berne specials" == 0 )
+					Player->AddSpell "vampire berne specials"
+				endif
+			endif
+			if ( VampClan == 3 )
+				if ( Player->GetSpell "vampire blood quarra" == 0 )
+					Player->AddSpell "vampire blood quarra"
+				endif
+			endif
+		endif
+		if ( Player->GetSpell "vampire attributes" == 0 )
+			Player->AddSpell "vampire attributes"
+		endif
+	endif
+
 	if ( pclev < 5 )
 		; MessageBox "Adding bonuses 1"
 		if ( Player->GetSpell "vn_lichattrlev1" == 0 )
@@ -9414,6 +9437,27 @@ set state to 2
 endif
 
 if ( state == 2 )
+
+	if ( vn_lich_vamp == 1 ) ; Remove vampire attribute fortification as well for body steal check
+		if ( VampClan == 1 )
+			if ( Player->GetSpell "vampire aundae specials" == 1 )
+				Player->RemoveSpell "vampire aundae specials"
+			endif
+		endif
+		if ( VampClan == 2 )
+			if ( Player->GetSpell "vampire berne specials" == 1 )
+				Player->RemoveSpell "vampire berne specials"
+			endif
+		endif
+		if ( VampClan == 3 )
+			if ( Player->GetSpell "vampire blood quarra" == 1 )
+				Player->RemoveSpell "vampire blood quarra"
+			endif
+		endif
+		if ( Player->GetSpell "vampire attributes" == 1 )
+			Player->RemoveSpell "vampire attributes"
+		endif
+	endif
 
 	if ( Player->GetSpell "vn_lichattrlev1" == 1 )
 		Player->RemoveSpell "vn_lichattrlev1"
