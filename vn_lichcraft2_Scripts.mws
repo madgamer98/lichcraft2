@@ -6364,10 +6364,12 @@ if ( state == 4 )
 	elseif ( ScriptRunning "vn_lichspelladd" == 1 )
 		set vn_lichspelladd.active to 1
 	endif
-	if ( Player->GetLevel == vn_next_power_level )
-		MessageBox "Power Ritual now available"
-		set vn_next_power_level to ( vn_next_power_level + 5 )
-		set vn_power_ritual_available to 1
+	if ( Player->GetLevel >= vn_next_power_level ) ; Checking if you are above that way you can't miss a level if you level up twice somehow
+		if ( vn_power_ritual_available == 0 ) ; Since we are now checking that you are above the level make sure you can't stack the progression unless used
+			MessageBox "Power Ritual now available"
+			set vn_next_power_level to ( vn_next_power_level + 5 )
+			set vn_power_ritual_available to 1
+		endif
 	endif
 	set state to 0
 	StopScript "vn_Lichlevelup"
@@ -10736,6 +10738,7 @@ if ( state == 1 )
 	endif	
 	set button to -1
 	MessageBox "Your skills are now P %.2f N %.2f S %.2f" vn_avenue_psionics vn_avenue_necromancy vn_avenue_sorcery
+	MessageBox "Next power ritual at level %.2f" vn_next_power_level
 endif
 
 if ( state == 3 )
@@ -11428,6 +11431,7 @@ if ( state == 20 )
 endif
 
 if ( state == 21 )
+	set vn_power_ritual_available to 0
 	set state to 0
 	StopScript "vn_power_ritual_success"
 endif
