@@ -38,6 +38,8 @@ Can be used with the default or alt Lichcraft 2 esp. Only activate if you have V
 
 Public Repository for current patch: https://github.com/madgamer98/lichcraft2
 
+Further changelogs will be found in the vn_lichcraft2_patch_changlog.txt file
+
 18 October 2022 Madgamer98 Lichcraft 2 Patch 2.0:
      - Fixed Spellmaker spell errors causing a fatal error and not allowing you to create spells.
      - Fixed Detection Timer to correctly trigger once every 5 seconds. It was never resetting so past the first 5 seconds it would check each frame.

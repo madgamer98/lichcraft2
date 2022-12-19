@@ -2,6 +2,9 @@
      2. Patch Changelog
 *****************************************************************
 
+19 December 2022 Madgamer98 Lichcraft 2 Patch 2.01:
+     - Fixed OpenMW issue where guards could trap the Player in a dialogue loop when hostile and engaging a Lich player
+
 18 October 2022 Madgamer98 Lichcraft 2 Patch 2.0:
      - Fixed Spellmaker spell errors causing a fatal error and not allowing you to create spells.
      - Fixed Detection Timer to correctly trigger once every 5 seconds. It was never resetting so past the first 5 seconds it would check each frame.
